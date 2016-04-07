@@ -13,7 +13,7 @@ public class ATM_Withdraw extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        message1 = new javax.swing.JLabel();
         ent = new javax.swing.JButton();
         Back = new javax.swing.JButton();
         Bath = new javax.swing.JLabel();
@@ -37,12 +37,12 @@ public class ATM_Withdraw extends javax.swing.JFrame {
         setPreferredSize(null);
         setResizable(false);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Withdraw");
-        jLabel1.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(204, 0, 51)));
+        message1.setFont(new Font("Tahoma", 1, 24)); // NOI18N
+        message1.setHorizontalAlignment(SwingConstants.CENTER);
+        message1.setText("Withdraw");
+        message1.setBorder(BorderFactory.createMatteBorder(3, 3, 3, 3, new Color(204, 0, 51)));
 
-        ent.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        ent.setFont(new Font("Tahoma", 1, 12)); // NOI18N
         ent.setText("Enter");
         ent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -50,7 +50,7 @@ public class ATM_Withdraw extends javax.swing.JFrame {
             }
         });
 
-        Back.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Back.setFont(new Font("Tahoma", 1, 11)); // NOI18N
         Back.setText("<< Back");
         Back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,16 +58,16 @@ public class ATM_Withdraw extends javax.swing.JFrame {
             }
         });
 
-        Bath.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        Bath.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Bath.setFont(new Font("Tahoma", 1, 24)); // NOI18N
+        Bath.setHorizontalAlignment(SwingConstants.CENTER);
         Bath.setText("฿");
-        Bath.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 255), 2));
+        Bath.setBorder(BorderFactory.createLineBorder(new Color(51, 51, 255), 2));
 
-        wit2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        wit2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        wit2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 204), 2));
+        wit2.setFont(new Font("Tahoma", 1, 18)); // NOI18N
+        wit2.setHorizontalAlignment(SwingConstants.CENTER);
+        wit2.setBorder(BorderFactory.createLineBorder(new Color(0, 0, 204), 2));
 
-        No9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        No9.setFont(new Font("Tahoma", 1, 14)); // NOI18N
         No9.setText("9");
         No9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,7 +75,7 @@ public class ATM_Withdraw extends javax.swing.JFrame {
             }
         });
 
-        reSet.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        reSet.setFont(new Font("Tahoma", 1, 14)); // NOI18N
         reSet.setText("reset");
         reSet.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,7 +83,7 @@ public class ATM_Withdraw extends javax.swing.JFrame {
             }
         });
 
-        No0.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        No0.setFont(new Font("Tahoma", 1, 14)); // NOI18N
         No0.setText("0");
         No0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,7 +91,7 @@ public class ATM_Withdraw extends javax.swing.JFrame {
             }
         });
 
-        No1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        No1.setFont(new Font("Tahoma", 1, 14)); // NOI18N
         No1.setText("1");
         No1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -99,7 +99,7 @@ public class ATM_Withdraw extends javax.swing.JFrame {
             }
         });
 
-        Del.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Del.setFont(new Font("Tahoma", 1, 14)); // NOI18N
         Del.setText("Del");
         Del.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,7 +107,7 @@ public class ATM_Withdraw extends javax.swing.JFrame {
             }
         });
 
-        No2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        No2.setFont(new Font("Tahoma", 1, 14)); // NOI18N
         No2.setText("2");
         No2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,7 +115,7 @@ public class ATM_Withdraw extends javax.swing.JFrame {
             }
         });
 
-        No3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        No3.setFont(new Font("Tahoma", 1, 14)); // NOI18N
         No3.setText("3");
         No3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,7 +123,7 @@ public class ATM_Withdraw extends javax.swing.JFrame {
             }
         });
 
-        No4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        No4.setFont(new Font("Tahoma", 1, 14)); // NOI18N
         No4.setText("4");
         No4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,7 +131,7 @@ public class ATM_Withdraw extends javax.swing.JFrame {
             }
         });
 
-        No5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        No5.setFont(new Font("Tahoma", 1, 14)); // NOI18N
         No5.setText("5");
         No5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,7 +139,7 @@ public class ATM_Withdraw extends javax.swing.JFrame {
             }
         });
 
-        No6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        No6.setFont(new Font("Tahoma", 1, 14)); // NOI18N
         No6.setText("6");
         No6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -147,7 +147,7 @@ public class ATM_Withdraw extends javax.swing.JFrame {
             }
         });
 
-        No7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        No7.setFont(new Font("Tahoma", 1, 14)); // NOI18N
         No7.setText("7");
         No7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -155,7 +155,7 @@ public class ATM_Withdraw extends javax.swing.JFrame {
             }
         });
 
-        No8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        No8.setFont(new Font("Tahoma", 1, 14)); // NOI18N
         No8.setText("8");
         No8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -163,61 +163,61 @@ public class ATM_Withdraw extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                            .addGroup(GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addGap(127, 127, 127)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(message1, GroupLayout.PREFERRED_SIZE, 138, GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(48, 48, 48)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(No4, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(No7, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(reSet, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(No1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                            .addComponent(No4, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(No7, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(reSet, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(No1, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE))
                                         .addGap(18, 18, 18)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(No5, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(No2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(No8, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(No0, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                            .addComponent(No5, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(No2, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(No8, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(No0, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE))
                                         .addGap(18, 18, 18)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(Del, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(No9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(No6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(No3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addComponent(wit2, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                            .addComponent(Del, GroupLayout.Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(No9, GroupLayout.Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(No6, GroupLayout.Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(No3, GroupLayout.Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(wit2, GroupLayout.PREFERRED_SIZE, 276, GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Bath, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(Bath, GroupLayout.PREFERRED_SIZE, 32, GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(Back, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Back, GroupLayout.PREFERRED_SIZE, 101, GroupLayout.PREFERRED_SIZE)
                         .addGap(46, 46, 46)
-                        .addComponent(ent, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(ent, GroupLayout.PREFERRED_SIZE, 97, GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(38, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+            layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(message1, GroupLayout.PREFERRED_SIZE, 43, GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(Bath, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(wit2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Bath, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(wit2, GroupLayout.PREFERRED_SIZE, 36, GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(No3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -226,7 +226,7 @@ public class ATM_Withdraw extends javax.swing.JFrame {
                         .addComponent(No9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Del))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                             .addComponent(No2)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -244,11 +244,11 @@ public class ATM_Withdraw extends javax.swing.JFrame {
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(reSet))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ent, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ent, GroupLayout.PREFERRED_SIZE, 31, GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(41, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Back, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Back, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -264,12 +264,12 @@ public class ATM_Withdraw extends javax.swing.JFrame {
            num2 = Integer.parseInt(wit2.getText());      // because int can get 10 digit of number (or) billion
           // get wit2(text) text to num2
         } else if(wit2.getText().length() > 10) { // wit2 length more than 10
-           JOptionPane.showMessageDialog(null, "It's too much AMOUNT!!"); 
+           JOptionPane.showMessageDialogInButton(null, "It's too much AMOUNT!!"); 
            wit2.setText("");  
         }
         
         if(num2==0) { // num2 equal 0 (or) num2 isn't declared by wit2(text)
-           JOptionPane.showMessageDialog(null, "Please insert MONEY!!");
+           JOptionPane.showMessageDialogInButton(null, "Please insert MONEY!!");
            wit2.setText("");
         } else if(num2 <= 100000) { // num2 must be lower equal 100,000
             if(num2>0 && (num2%20==0||num2%50==0||num2%70==0)) {  // num2 must inform of BANKNOTE
@@ -278,7 +278,7 @@ public class ATM_Withdraw extends javax.swing.JFrame {
                    storeData.balance = Integer.toString(change);
                    getDB.updateDB();
                    getDB.updateStatement_With(wit2.getText());
-                   JOptionPane.showMessageDialog(null, "\nID : "+storeData.user+"\n"
+                   JOptionPane.showMessageDialogInButton(null, "\nID : "+storeData.user+"\n"
                         + "\nName : "+storeData.name+"\n"
                         + "\nMode : Withdraw\n"
                         + "\nAmount : " + num2 +"\n"
@@ -286,15 +286,15 @@ public class ATM_Withdraw extends javax.swing.JFrame {
                    in.setVisible(true);
                    this.dispose();
                 } else { // IF MONEY insertion > balance!!
-                   JOptionPane.showMessageDialog(null, "Don't have enough balance for Withdraw, Please try again!!");
+                   JOptionPane.showMessageDialogInButton(null, "Don't have enough balance for Withdraw, Please try again!!");
                    wit2.setText("");
                 }
             } else if(!(num2%20==0||num2%50==0||num2%70==0)) { // IF NOT BANKNOTE!!
-                JOptionPane.showMessageDialog(null, "Plese insert correct money in the form of BANKNOTE!!");
+                JOptionPane.showMessageDialogInButton(null, "Plese insert correct money in the form of BANKNOTE!!");
                 wit2.setText("");
             }
         } else { // more than 100,000 about(100,001 to billion)
-            JOptionPane.showMessageDialog(null, "Cannot insert AMOUNT more than 100,000 Baht!!");
+            JOptionPane.showMessageDialogInButton(null, "Cannot insert AMOUNT more than 100,000 Baht!!");
             wit2.setText("");
         }
     }//GEN-LAST:event_entActionPerformed
@@ -369,13 +369,13 @@ public class ATM_Withdraw extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ATM_Withdraw.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logInButtonging.logInButtonger.getlogInButtonger(ATM_Withdraw.class.getName()).logInButton(java.util.logInButtonging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ATM_Withdraw.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logInButtonging.logInButtonger.getlogInButtonger(ATM_Withdraw.class.getName()).logInButton(java.util.logInButtonging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ATM_Withdraw.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logInButtonging.logInButtonger.getlogInButtonger(ATM_Withdraw.class.getName()).logInButton(java.util.logInButtonging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ATM_Withdraw.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logInButtonging.logInButtonger.getlogInButtonger(ATM_Withdraw.class.getName()).logInButton(java.util.logInButtonging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -402,7 +402,7 @@ public class ATM_Withdraw extends javax.swing.JFrame {
     private javax.swing.JButton No8;
     private javax.swing.JButton No9;
     private javax.swing.JButton ent;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel message1;
     private javax.swing.JButton reSet;
     private javax.swing.JLabel wit2;
     // End of variables declaration//GEN-END:variables

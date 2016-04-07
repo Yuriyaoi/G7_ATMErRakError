@@ -1,6 +1,11 @@
 package atm_tk;
 
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.Toolkit;
+import javax.swing.BorderFactory;
+import javax.swing.GroupLayout;
+import javax.swing.SwingConstants;
 
 public class ATM_Info extends javax.swing.JFrame {
     public ATM_Info() {
@@ -29,8 +34,8 @@ public class ATM_Info extends javax.swing.JFrame {
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("GG.png")));
         setResizable(false);
 
-        Deposit.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        Deposit.setForeground(new java.awt.Color(51, 153, 0));
+        Deposit.setFont(new Font("Tahoma", 1, 18)); // NOI18N
+        Deposit.setForeground(new Color(51, 153, 0));
         Deposit.setText("Deposit");
         Deposit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -38,8 +43,8 @@ public class ATM_Info extends javax.swing.JFrame {
             }
         });
 
-        Withdraw.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        Withdraw.setForeground(new java.awt.Color(255, 102, 102));
+        Withdraw.setFont(new Font("Tahoma", 1, 18)); // NOI18N
+        Withdraw.setForeground(new Color(255, 102, 102));
         Withdraw.setText("Withdraw");
         Withdraw.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -52,8 +57,8 @@ public class ATM_Info extends javax.swing.JFrame {
             }
         });
 
-        Statement.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        Statement.setForeground(new java.awt.Color(0, 0, 255));
+        Statement.setFont(new Font("Tahoma", 1, 18)); // NOI18N
+        Statement.setForeground(new Color(0, 0, 255));
         Statement.setText("Statement");
         Statement.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -61,26 +66,26 @@ public class ATM_Info extends javax.swing.JFrame {
             }
         });
 
-        Back.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        Back.setForeground(new java.awt.Color(102, 0, 51));
-        Back.setText("LogOut");
+        Back.setFont(new Font("Tahoma", 1, 18)); // NOI18N
+        Back.setForeground(new Color(102, 0, 51));
+        Back.setText("logInButtonOut");
         Back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BackActionPerformed(evt);
             }
         });
 
-        Account.setBackground(new java.awt.Color(255, 51, 51));
-        Account.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        Account.setForeground(new java.awt.Color(0, 153, 153));
-        Account.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Account.setBackground(new Color(255, 51, 51));
+        Account.setFont(new Font("Tahoma", 1, 24)); // NOI18N
+        Account.setForeground(new Color(0, 153, 153));
+        Account.setHorizontalAlignment(SwingConstants.CENTER);
         Account.setText("Account Status");
-        Account.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 51), 2));
+        Account.setBorder(BorderFactory.createLineBorder(new Color(255, 0, 51), 2));
 
-        CustomerID.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        CustomerID.setForeground(new java.awt.Color(0, 102, 102));
-        CustomerID.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        CustomerID.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 255), 2));
+        CustomerID.setFont(new Font("Tahoma", 0, 24)); // NOI18N
+        CustomerID.setForeground(new Color(0, 102, 102));
+        CustomerID.setHorizontalAlignment(SwingConstants.CENTER);
+        CustomerID.setBorder(BorderFactory.createLineBorder(new Color(51, 51, 255), 2));
         CustomerID.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         CustomerID.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
@@ -99,103 +104,103 @@ public class ATM_Info extends javax.swing.JFrame {
             }
         });
 
-        CustomerName.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        CustomerName.setForeground(new java.awt.Color(153, 0, 153));
-        CustomerName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        CustomerName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 255), 2));
+        CustomerName.setFont(new Font("Tahoma", 0, 24)); // NOI18N
+        CustomerName.setForeground(new Color(153, 0, 153));
+        CustomerName.setHorizontalAlignment(SwingConstants.CENTER);
+        CustomerName.setBorder(BorderFactory.createLineBorder(new Color(51, 51, 255), 2));
         CustomerName.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        CustomerBalance.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        CustomerBalance.setForeground(new java.awt.Color(102, 102, 0));
-        CustomerBalance.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        CustomerBalance.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 51), 2));
+        CustomerBalance.setFont(new Font("Tahoma", 0, 24)); // NOI18N
+        CustomerBalance.setForeground(new Color(102, 102, 0));
+        CustomerBalance.setHorizontalAlignment(SwingConstants.CENTER);
+        CustomerBalance.setBorder(BorderFactory.createLineBorder(new Color(0, 255, 51), 2));
         CustomerBalance.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 153, 255));
+        jLabel7.setFont(new Font("Tahoma", 1, 24)); // NOI18N
+        jLabel7.setForeground(new Color(0, 153, 255));
         jLabel7.setText("ID:");
         jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 153, 255));
+        jLabel8.setFont(new Font("Tahoma", 1, 24)); // NOI18N
+        jLabel8.setForeground(new Color(0, 153, 255));
         jLabel8.setText("Name:");
         jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 102, 0));
+        jLabel9.setFont(new Font("Tahoma", 1, 24)); // NOI18N
+        jLabel9.setForeground(new Color(0, 102, 0));
         jLabel9.setText("Balance");
         jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        Bath.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        Bath.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Bath.setFont(new Font("Tahoma", 1, 24)); // NOI18N
+        Bath.setHorizontalAlignment(SwingConstants.CENTER);
         Bath.setText("฿");
-        Bath.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 51), 2));
+        Bath.setBorder(BorderFactory.createLineBorder(new Color(0, 255, 51), 2));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(20, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(CustomerBalance, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(CustomerBalance, GroupLayout.PREFERRED_SIZE, 340, GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Bath, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(Back, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(Bath, GroupLayout.PREFERRED_SIZE, 32, GroupLayout.PREFERRED_SIZE))
+                            .addComponent(Back, GroupLayout.PREFERRED_SIZE, 127, GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(Statement, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Deposit, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Withdraw, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                            .addComponent(Statement, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Deposit, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Withdraw, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel8, GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+                            .addComponent(jLabel7, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(CustomerID, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(CustomerName, javax.swing.GroupLayout.DEFAULT_SIZE, 411, Short.MAX_VALUE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                            .addComponent(CustomerID, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(CustomerName, GroupLayout.DEFAULT_SIZE, 411, Short.MAX_VALUE))))
+                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(144, 144, 144)
                 .addComponent(jLabel9)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Account, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Account, GroupLayout.PREFERRED_SIZE, 242, GroupLayout.PREFERRED_SIZE)
                 .addGap(143, 143, 143))
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            .addGroup(GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(Account, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Account, GroupLayout.PREFERRED_SIZE, 46, GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CustomerID, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                    .addComponent(CustomerID, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CustomerName, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                    .addComponent(CustomerName, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel9, GroupLayout.PREFERRED_SIZE, 31, GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(Deposit, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Deposit, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE)
                         .addGap(9, 9, 9)
-                        .addComponent(Withdraw, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(Bath, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(CustomerBalance, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)))
+                        .addComponent(Withdraw, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(Bath, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(CustomerBalance, GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Statement, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Back, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                    .addComponent(Statement, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Back, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE))
                 .addGap(24, 24, 24))
         );
 
@@ -226,7 +231,7 @@ public class ATM_Info extends javax.swing.JFrame {
     }//GEN-LAST:event_StatementMouseClicked
 
     private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
-        ATM_Login in = new ATM_Login();
+        ATM_logInButtonin in = new ATM_logInButtonin();
         in.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_BackActionPerformed
@@ -265,13 +270,13 @@ public class ATM_Info extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ATM_Info.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logInButtonging.logInButtonger.getlogInButtonger(ATM_Info.class.getName()).logInButton(java.util.logInButtonging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ATM_Info.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logInButtonging.logInButtonger.getlogInButtonger(ATM_Info.class.getName()).logInButton(java.util.logInButtonging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ATM_Info.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logInButtonging.logInButtonger.getlogInButtonger(ATM_Info.class.getName()).logInButton(java.util.logInButtonging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ATM_Info.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logInButtonging.logInButtonger.getlogInButtonger(ATM_Info.class.getName()).logInButton(java.util.logInButtonging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
