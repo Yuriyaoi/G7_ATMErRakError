@@ -9,8 +9,9 @@ public class getDB {
     static storeData storedata;
     public getDB() {
         db = new CSDbDelegate
-                    ("cs14sitkmutt.me","3306","CSC105_G4","CSC105_G4","CSC105_G4");
+                    ("csprog-in.sit.kmutt.ac.th","3306","CSC105_G4","csc105_2014","csc105");
         db.connect();
+        System.out.println(db.connect());
     }
     public String checkPassword(String user , String password){
         String output = "";

@@ -95,6 +95,11 @@ public class ATM_Login extends javax.swing.JFrame {
                 InsertPinMousePressed(evt);
             }
         });
+        InsertPin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                InsertPinActionPerformed(evt);
+            }
+        });
         InsertPin.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 InsertPinKeyPressed(evt);
@@ -261,6 +266,10 @@ public class ATM_Login extends javax.swing.JFrame {
             }   
         } 
     }//GEN-LAST:event_LogActionPerformed
+
+    private void InsertPinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InsertPinActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_InsertPinActionPerformed
 
     /**
      * @param args the command line arguments
