@@ -15,7 +15,7 @@ public class ATM_Statement extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         User_Statement = new javax.swing.JTable();
-        message1 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         back = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -59,14 +59,14 @@ public class ATM_Statement extends javax.swing.JFrame {
             User_Statement.getColumnModel().getColumn(3).setResizable(false);
         }
 
-        message1.setBackground(new Color(0, 51, 255));
-        message1.setFont(new Font("Tahoma", 1, 30)); // NOI18N
-        message1.setForeground(new Color(0, 153, 51));
-        message1.setHorizontalAlignment(SwingConstants.CENTER);
-        message1.setText("Statements");
-        message1.setBorder(BorderFactory.createLineBorder(new Color(255, 0, 0), 2));
+        jLabel1.setBackground(new java.awt.Color(0, 51, 255));
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 153, 51));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Statements");
+        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 0), 2));
 
-        back.setFont(new Font("Tahoma", 1, 14)); // NOI18N
+        back.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         back.setText("<< Back");
         back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,31 +74,31 @@ public class ATM_Statement extends javax.swing.JFrame {
             }
         });
 
-        GroupLayout layout = new GroupLayout(getContentPane());
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(42, 42, 42)
-                        .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(back)
-                            .addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, 441, GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 441, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(151, 151, 151)
-                        .addComponent(message1, GroupLayout.PREFERRED_SIZE, 226, GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(47, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addComponent(message1, GroupLayout.PREFERRED_SIZE, 42, GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
-                .addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, 245, GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(back, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE)
+                .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
@@ -146,13 +146,13 @@ public class ATM_Statement extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logInButtonging.logInButtonger.getlogInButtonger(ATM_Statement.class.getName()).logInButton(java.util.logInButtonging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ATM_Statement.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logInButtonging.logInButtonger.getlogInButtonger(ATM_Statement.class.getName()).logInButton(java.util.logInButtonging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ATM_Statement.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logInButtonging.logInButtonger.getlogInButtonger(ATM_Statement.class.getName()).logInButton(java.util.logInButtonging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ATM_Statement.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logInButtonging.logInButtonger.getlogInButtonger(ATM_Statement.class.getName()).logInButton(java.util.logInButtonging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ATM_Statement.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -167,7 +167,7 @@ public class ATM_Statement extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable User_Statement;
     private javax.swing.JButton back;
-    private javax.swing.JLabel message1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
