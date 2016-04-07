@@ -1,9 +1,15 @@
 
 package atm_tk;
 
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
+import javax.swing.BorderFactory;
+import javax.swing.GroupLayout;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
 
 public class ATM_Login extends javax.swing.JFrame {
     getDB d1 = new getDB(); // call getDB
@@ -16,12 +22,12 @@ public class ATM_Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        InsertID = new javax.swing.JTextField();
-        Log = new javax.swing.JButton();
-        InsertPin = new javax.swing.JPasswordField();
+        message1 = new javax.swing.JLabel();
+        message2 = new javax.swing.JLabel();
+        message3 = new javax.swing.JLabel();
+        insertID = new JTextField();
+        logInButton = new javax.swing.JButton();
+        insertPin = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("TK-ATM ver.1.0.0");
@@ -29,121 +35,121 @@ public class ATM_Login extends javax.swing.JFrame {
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("GG.png")));
         setResizable(false);
 
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Welcome");
-        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 0), 2));
+        message1.setBackground(new Color(255, 255, 255));
+        message1.setFont(new Font("Tahoma", 1, 36)); // NOI18N
+        message1.setForeground(new Color(255, 0, 0));
+        message1.setHorizontalAlignment(SwingConstants.CENTER);
+        message1.setText("Welcome");
+        message1.setBorder(BorderFactory.createLineBorder(new Color(255, 51, 0), 2));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 0, 51));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("to");
-        jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 0), 2));
+        message2.setFont(new Font("Tahoma", 1, 18)); // NOI18N
+        message2.setForeground(new Color(255, 0, 51));
+        message2.setHorizontalAlignment(SwingConstants.CENTER);
+        message2.setText("to");
+        message2.setBorder(BorderFactory.createLineBorder(new Color(255, 51, 0), 2));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("TK-ATM");
-        jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 0), 2));
+        message3.setFont(new Font("Tahoma", 1, 24)); // NOI18N
+        message3.setForeground(new Color(255, 0, 0));
+        message3.setHorizontalAlignment(SwingConstants.CENTER);
+        message3.setText("TK-ATM");
+        message3.setBorder(BorderFactory.createLineBorder(new Color(255, 51, 0), 2));
 
-        InsertID.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        InsertID.setForeground(new java.awt.Color(153, 153, 153));
-        InsertID.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        InsertID.setText("Please Insert Your ID");
-        InsertID.addMouseListener(new java.awt.event.MouseAdapter() {
+        insertID.setFont(new Font("Tahoma", 0, 18)); // NOI18N
+        insertID.setForeground(new Color(153, 153, 153));
+        insertID.setHorizontalAlignment(JTextField.CENTER);
+        insertID.setText("Please Insert Your ID");
+        insertID.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                InsertIDMouseClicked(evt);
+                insertIDMouseClicked(evt);
             }
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                InsertIDMousePressed(evt);
+                insertIDMousePressed(evt);
             }
         });
-        InsertID.addActionListener(new java.awt.event.ActionListener() {
+        insertID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                InsertIDActionPerformed(evt);
+                insertIDActionPerformed(evt);
             }
         });
-        InsertID.addKeyListener(new java.awt.event.KeyAdapter() {
+        insertID.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                InsertIDKeyPressed(evt);
+                insertIDKeyPressed(evt);
             }
         });
 
-        Log.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        Log.setText("Login");
-        Log.addMouseListener(new java.awt.event.MouseAdapter() {
+        logInButton.setFont(new Font("Tahoma", 1, 12)); // NOI18N
+        logInButton.setText("logInButtonin");
+        logInButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                LogMouseClicked(evt);
+                logInButtonMouseClicked(evt);
             }
         });
-        Log.addActionListener(new java.awt.event.ActionListener() {
+        logInButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LogActionPerformed(evt);
+                logInButtonActionPerformed(evt);
             }
         });
 
-        InsertPin.setForeground(new java.awt.Color(153, 153, 153));
-        InsertPin.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        InsertPin.setText("Ipin");
-        InsertPin.addMouseListener(new java.awt.event.MouseAdapter() {
+        insertPin.setForeground(new Color(153, 153, 153));
+        insertPin.setHorizontalAlignment(JTextField.CENTER);
+        insertPin.setText("Ipin");
+        insertPin.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                InsertPinMouseClicked(evt);
+                insertPinMouseClicked(evt);
             }
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                InsertPinMousePressed(evt);
+                insertPinMousePressed(evt);
             }
         });
-        InsertPin.addActionListener(new java.awt.event.ActionListener() {
+        insertPin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                InsertPinActionPerformed(evt);
+                insertPinActionPerformed(evt);
             }
         });
-        InsertPin.addKeyListener(new java.awt.event.KeyAdapter() {
+        insertPin.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                InsertPinKeyPressed(evt);
+                insertPinKeyPressed(evt);
             }
         });
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(65, 65, 65)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(message1, GroupLayout.PREFERRED_SIZE, 211, GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(40, 40, 40)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(message2, GroupLayout.PREFERRED_SIZE, 54, GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(70, 70, 70)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(InsertID, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(InsertPin, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(message3, GroupLayout.PREFERRED_SIZE, 146, GroupLayout.PREFERRED_SIZE))
+                    .addComponent(insertID, GroupLayout.PREFERRED_SIZE, 276, GroupLayout.PREFERRED_SIZE)
+                    .addComponent(insertPin, GroupLayout.PREFERRED_SIZE, 276, GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(82, 82, 82)
-                        .addComponent(Log, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(logInButton, GroupLayout.PREFERRED_SIZE, 108, GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(66, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(message1, GroupLayout.PREFERRED_SIZE, 41, GroupLayout.PREFERRED_SIZE)
                 .addGap(9, 9, 9)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(message2, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
                 .addGap(13, 13, 13)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(message3, GroupLayout.PREFERRED_SIZE, 41, GroupLayout.PREFERRED_SIZE)
                 .addGap(19, 19, 19)
-                .addComponent(InsertID, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(insertID, GroupLayout.PREFERRED_SIZE, 36, GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14)
-                .addComponent(InsertPin, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(insertPin, GroupLayout.PREFERRED_SIZE, 36, GroupLayout.PREFERRED_SIZE)
                 .addGap(11, 11, 11)
-                .addComponent(Log, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(logInButton, GroupLayout.PREFERRED_SIZE, 37, GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(26, Short.MAX_VALUE))
         );
 
@@ -151,125 +157,125 @@ public class ATM_Login extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 // no action here
-    private void InsertIDMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InsertIDMouseClicked
+    private void insertIDMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_insertIDMouseClicked
         
-    }//GEN-LAST:event_InsertIDMouseClicked
+    }//GEN-LAST:event_insertIDMouseClicked
 // no action here
-    private void LogMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogMouseClicked
+    private void logInButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logInButtonMouseClicked
         
-    }//GEN-LAST:event_LogMouseClicked
+    }//GEN-LAST:event_logInButtonMouseClicked
 //do nothing here
-    private void InsertIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InsertIDActionPerformed
+    private void insertIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insertIDActionPerformed
 
-    }//GEN-LAST:event_InsertIDActionPerformed
+    }//GEN-LAST:event_insertIDActionPerformed
 
-    private void InsertPinKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_InsertPinKeyPressed
+    private void insertPinKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_insertPinKeyPressed
         if(evt.getKeyCode()==KeyEvent.VK_ENTER) {
-            if(InsertID.getText().equals("Please Insert Your ID")||InsertID.getText().equals("")) {
+            if(insertID.getText().equals("Please Insert Your ID")||insertID.getText().equals("")) {
                JOptionPane.showMessageDialog(null, "Please Insert Your ID");
             }
-            else if(!(InsertID.getText().equals("Please Insert Your ID")||InsertID.getText().equals(""))) {
-                if("Correct password".equals(d1.checkPassword(InsertID.getText(), InsertPin.getText()))) {
+            else if(!(insertID.getText().equals("Please Insert Your ID")||insertID.getText().equals(""))) {
+                if("Correct password".equals(d1.checkPassword(insertID.getText(), insertPin.getText()))) {
                    in.setVisible(true);
                    this.dispose();
                 }
-                else if("Wrong password".equals(d1.checkPassword(InsertID.getText(), InsertPin.getText()))) {
-                    if(InsertPin.getText().equals("")) {
+                else if("Wrong password".equals(d1.checkPassword(insertID.getText(), insertPin.getText()))) {
+                    if(insertPin.getText().equals("")) {
                         JOptionPane.showMessageDialog(null, "Please insert PIN");
                     } else {
                         JOptionPane.showMessageDialog(null, "Incorrect PIN, Please try again");
                     }
                 }
-                else if("Wrong User".equals(d1.checkPassword(InsertID.getText(), InsertPin.getText()))) {
+                else if("Wrong User".equals(d1.checkPassword(insertID.getText(), insertPin.getText()))) {
                     JOptionPane.showMessageDialog(null, "Don't have this Account, Should register");
                 }
             }
         }
-    }//GEN-LAST:event_InsertPinKeyPressed
+    }//GEN-LAST:event_insertPinKeyPressed
 // no action here
-    private void InsertPinMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InsertPinMouseClicked
+    private void insertPinMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_insertPinMouseClicked
       
-    }//GEN-LAST:event_InsertPinMouseClicked
+    }//GEN-LAST:event_insertPinMouseClicked
 
-    private void InsertIDKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_InsertIDKeyPressed
+    private void insertIDKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_insertIDKeyPressed
         if(evt.getKeyCode()==KeyEvent.VK_ENTER) {
-            if(InsertID.getText().equals("Please Insert Your ID")||InsertID.getText().equals("")) {
+            if(insertID.getText().equals("Please Insert Your ID")||insertID.getText().equals("")) {
                JOptionPane.showMessageDialog(null, "Please Insert Your ID");
             }
-            else if(!(InsertID.getText().equals("Please Insert Your ID")||InsertID.getText().equals(""))) {
-                if("Correct password".equals(d1.checkPassword(InsertID.getText(), InsertPin.getText()))) {
+            else if(!(insertID.getText().equals("Please Insert Your ID")||insertID.getText().equals(""))) {
+                if("Correct password".equals(d1.checkPassword(insertID.getText(), insertPin.getText()))) {
                    in.setVisible(true);
                    this.dispose();
                 }
-                else if("Wrong password".equals(d1.checkPassword(InsertID.getText(), InsertPin.getText()))) {
-                    if(InsertPin.getText().equals("")) {
+                else if("Wrong password".equals(d1.checkPassword(insertID.getText(), insertPin.getText()))) {
+                    if(insertPin.getText().equals("")) {
                         JOptionPane.showMessageDialog(null, "Please insert PIN");
                     } else {
                         JOptionPane.showMessageDialog(null, "Incorrect PIN, Please try again");
                     }
                 }
-                else if("Wrong User".equals(d1.checkPassword(InsertID.getText(), InsertPin.getText()))) {
+                else if("Wrong User".equals(d1.checkPassword(insertID.getText(), insertPin.getText()))) {
                     JOptionPane.showMessageDialog(null, "Don't have this Account, Should register");
                 }
             }
         }
-    }//GEN-LAST:event_InsertIDKeyPressed
+    }//GEN-LAST:event_insertIDKeyPressed
 
-    private void InsertIDMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InsertIDMousePressed
-         if(InsertID.getText().equals("Please Insert Your ID")) {
-            InsertID.setText("");
-            InsertID.setForeground(new java.awt.Color(0, 0, 0));
-        }if(InsertPin.getText().equals("")) {
-            InsertPin.setForeground(new java.awt.Color(153, 153, 153));
-            InsertPin.setText("Ipin");
+    private void insertIDMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_insertIDMousePressed
+         if(insertID.getText().equals("Please Insert Your ID")) {
+            insertID.setText("");
+            insertID.setForeground(new Color(0, 0, 0));
+        }if(insertPin.getText().equals("")) {
+            insertPin.setForeground(new Color(153, 153, 153));
+            insertPin.setText("Ipin");
         }
-    }//GEN-LAST:event_InsertIDMousePressed
+    }//GEN-LAST:event_insertIDMousePressed
 
-    private void InsertPinMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InsertPinMousePressed
-        if(InsertPin.getText().equals("Ipin")) {
-            InsertPin.setText("");
-            InsertPin.setForeground(new java.awt.Color(0, 0, 0));
-        }if(InsertID.getText().equals("")) {
-            InsertID.setForeground(new java.awt.Color(153, 153, 153));
-            InsertID.setText("Please Insert Your ID");
+    private void insertPinMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_insertPinMousePressed
+        if(insertPin.getText().equals("Ipin")) {
+            insertPin.setText("");
+            insertPin.setForeground(new Color(0, 0, 0));
+        }if(insertID.getText().equals("")) {
+            insertID.setForeground(new Color(153, 153, 153));
+            insertID.setText("Please Insert Your ID");
         }
-    }//GEN-LAST:event_InsertPinMousePressed
+    }//GEN-LAST:event_insertPinMousePressed
 
-    private void LogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogActionPerformed
-        if(InsertID.getText().equals("Please Insert Your ID")||InsertID.getText().equals("")) {
+    private void logInButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logInButtonActionPerformed
+        if(insertID.getText().equals("Please Insert Your ID")||insertID.getText().equals("")) {
            JOptionPane.showMessageDialog(null, "Please Insert Your ID");
         } 
-        else if(!(InsertID.getText().equals("Please Insert Your ID")||InsertID.getText().equals(""))) {
-            if("Correct password".equals(d1.checkPassword(InsertID.getText(), InsertPin.getText()))) {
+        else if(!(insertID.getText().equals("Please Insert Your ID")||insertID.getText().equals(""))) {
+            if("Correct password".equals(d1.checkPassword(insertID.getText(), insertPin.getText()))) {
                in.setVisible(true);
                this.dispose();
             }
-            else if("Wrong password".equals(d1.checkPassword(InsertID.getText(), InsertPin.getText()))) {
-                if(InsertPin.getText().equals("")) {
+            else if("Wrong password".equals(d1.checkPassword(insertID.getText(), insertPin.getText()))) {
+                if(insertPin.getText().equals("")) {
                     JOptionPane.showMessageDialog(null, "Please insert PIN");
                 } else {
                     JOptionPane.showMessageDialog(null, "Incorrect PIN, Please try again");
                 }
             }
-            else if("Wrong User".equals(d1.checkPassword(InsertID.getText(), InsertPin.getText()))) {
+            else if("Wrong User".equals(d1.checkPassword(insertID.getText(), insertPin.getText()))) {
                JOptionPane.showMessageDialog(null, "Don't have this Account, Should register");
             }
         }
-        if (InsertID.getText().length()>=0 && InsertPin.getText().length()>=0) {
-            if(InsertID.getText().length()==0) {
-                InsertID.setForeground(new java.awt.Color(153, 153, 153));
-                InsertID.setText("Please Insert Your ID");
+        if (insertID.getText().length()>=0 && insertPin.getText().length()>=0) {
+            if(insertID.getText().length()==0) {
+                insertID.setForeground(new Color(153, 153, 153));
+                insertID.setText("Please Insert Your ID");
             }
-            if(InsertPin.getText().length()==0){
-                InsertPin.setForeground(new java.awt.Color(153, 153, 153));
-                InsertPin.setText("Ipin");
+            if(insertPin.getText().length()==0){
+                insertPin.setForeground(new Color(153, 153, 153));
+                insertPin.setText("Ipin");
             }   
         } 
-    }//GEN-LAST:event_LogActionPerformed
+    }//GEN-LAST:event_logInButtonActionPerformed
 
-    private void InsertPinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InsertPinActionPerformed
+    private void insertPinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insertPinActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_InsertPinActionPerformed
+    }//GEN-LAST:event_insertPinActionPerformed
 
     /**
      * @param args the command line arguments
@@ -307,11 +313,11 @@ public class ATM_Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField InsertID;
-    private javax.swing.JPasswordField InsertPin;
-    private javax.swing.JButton Log;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private JTextField insertID;
+    private javax.swing.JPasswordField insertPin;
+    private javax.swing.JButton logInButton;
+    private javax.swing.JLabel message1;
+    private javax.swing.JLabel message2;
+    private javax.swing.JLabel message3;
     // End of variables declaration//GEN-END:variables
 }
