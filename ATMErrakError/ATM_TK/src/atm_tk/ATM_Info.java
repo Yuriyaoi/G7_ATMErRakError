@@ -37,6 +37,11 @@ public class ATM_Info extends javax.swing.JFrame {
                 DepositMouseClicked(evt);
             }
         });
+        Deposit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DepositActionPerformed(evt);
+            }
+        });
 
         Withdraw.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         Withdraw.setForeground(new java.awt.Color(255, 102, 102));
@@ -250,6 +255,10 @@ public class ATM_Info extends javax.swing.JFrame {
         }
         CustomerBalance.setText(s);
     }//GEN-LAST:event_CustomerIDAncestorAdded
+
+    private void DepositActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DepositActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DepositActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
