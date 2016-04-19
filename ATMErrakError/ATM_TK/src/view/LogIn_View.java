@@ -38,7 +38,7 @@ public class LogIn_View extends JFrame{
         initComponents();
     }
     
-     private void initComponents() {
+    private void initComponents() {
 
         message1 = new JLabel();
         message2 = new JLabel();
