@@ -7,7 +7,7 @@ package atm_tk;
 
 /**
  *
- * @author cs
+ * @author csssss
  */
 public class testUI {
     
