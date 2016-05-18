@@ -27,7 +27,7 @@ public class Balance extends JFrame
 	private JButton statementButton;
 	private JButton depositButton;
 	private JButton withdrawButton;
-	private JButton logoutButton;
+	private JButton backButton;
 	private JLabel balanceLabel;
 	private JLabel idLabel;
 	private JLabel nameLabel;
@@ -56,31 +56,52 @@ public class Balance extends JFrame
 		balanceLabel.setBounds(84, 428, 249, 35);
 		getContentPane().add(balanceLabel);
 		
-		logoutButton = new JButton("Logout");
-		logoutButton.setBounds(101, 534, 108, 40);
-		logoutButton.setBackground(new Color(85, 85, 85));
-		logoutButton.setForeground(Color.WHITE);
-		logoutButton.setFocusPainted(false); //กรอบตัวอักษร
-		logoutButton.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
-		getContentPane().add(logoutButton);
+		backButton = new JButton("Back");
+		backButton.setBounds(101, 534, 108, 40);
+		backButton.setBackground(new Color(85, 85, 85));
+		backButton.setForeground(Color.WHITE);
+		backButton.setFocusPainted(false); //กรอบตัวอักษร
+		backButton.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
+                backButton.addActionListener(new java.awt.event.ActionListener() {
+                    public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        backButtonActionPerformed(evt);
+                    }
+                });
+		getContentPane().add(backButton);
 		
 		withdrawButton = new JButton("Withdraw");
 		withdrawButton.setBounds(542, 428, 181, 47);
 		setButtonStyle(withdrawButton);
+                withdrawButton.addActionListener(new java.awt.event.ActionListener() {
+                    public void actionPerformed(java.awt.event.ActionEvent evt) {
+                       withdrawButtonActionPerformed(evt);
+                    }
+                });
 		getContentPane().add(withdrawButton);
 		
 		depositButton = new JButton("Deposit");
 		depositButton.setBounds(542, 486, 181, 47);
 		setButtonStyle(depositButton);
+                depositButton.addActionListener(new java.awt.event.ActionListener() {
+                    public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        depositButtonActionPerformed(evt);
+                    }
+                });
+		panel.add(depositButton);
 		getContentPane().add(depositButton);
 		
 		statementButton = new JButton("Statement");
 		statementButton.setBounds(542, 543, 181, 47);
 		setButtonStyle(statementButton);
+                statementButton.addActionListener(new java.awt.event.ActionListener() {
+                    public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        statementButtonActionPerformed(evt);
+                    }
+                });
 		getContentPane().add(statementButton);
 		
 		background = new JLabel("");
-                background.setIcon(new ImageIcon(getClass().getResource("/view/Balance.png")));
+                background.setIcon(new ImageIcon(getClass().getResource("/image/Balance.png")));
 		background.setBounds(22, 0, 800, 600);
 		getContentPane().add(background);
 		panel.setLayout(null);
@@ -96,7 +117,6 @@ public class Balance extends JFrame
                 frame.setVisible(true);
 				
 	}
-
 	
 	public void setButtonStyle(JButton button)
 	{
@@ -105,4 +125,24 @@ public class Balance extends JFrame
 		button.setFocusPainted(false); //กรอบตัวอักษร
 		button.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
 	}
+        private void withdrawButtonActionPerformed(java.awt.event.ActionEvent evt)
+        {                                          
+            new Withdraw().setVisible(true);
+            dispose();
+        } 
+        private void depositButtonActionPerformed(java.awt.event.ActionEvent evt)
+        {                                          
+            new Deposit().setVisible(true);
+            dispose();
+        }
+        private void backButtonActionPerformed(java.awt.event.ActionEvent evt)
+        {                                          
+            new Menu().setVisible(true);
+            dispose();
+        }
+        private void statementButtonActionPerformed(java.awt.event.ActionEvent evt)
+        {                                          
+            new Statement().setVisible(true);
+            dispose();
+        }
 }
