@@ -22,9 +22,9 @@ import view.Menu;
         private Authentication authen;
         private String username;
         private String password;
+        private MenuControl menu;
         public LoginControl(){
            display = new Login();
-           menu = new Menu();
            display.setActionLogIn(new LogInButtonAction());
            display.setVisible(true);
         } 
@@ -46,6 +46,9 @@ import view.Menu;
                     display.showPopUp("Wrong Username or Password");
                 }
                     
+                menu = new MenuControl();
+                //menu.setVisible(true);
+                display.dispose();
             }
         }
 

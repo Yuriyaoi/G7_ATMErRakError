@@ -25,7 +25,7 @@ public class Login extends JFrame
 	private JTextField usernameField;
 	private JPasswordField passwordField;
 	private JButton loginButton;
-        private JLabel closeButton;
+        private JButton closeButton;
         private JLabel background;
 
         //Controller controller = new Controller();
@@ -64,9 +64,12 @@ public class Login extends JFrame
 
 		panel.add(loginButton);
 		
-		closeButton = new JLabel();
-                closeButton.setIcon(new ImageIcon(getClass().getResource("/image/Close Button.png")));
-		closeButton.setBounds(760, 0, 40, 40);
+		closeButton = new JButton("");
+		closeButton.setBounds(765, 0, 35,35);
+                closeButton.setBackground(new Color(85, 85, 85));
+		closeButton.setForeground(Color.WHITE);
+		closeButton.setFont(new Font("Yu Gothic UI", Font.PLAIN, 10));
+                closeButton.setIcon(new ImageIcon(getClass().getResource("/image/Exit-Button.png")));
 		closeButton.addMouseListener(new MouseAdapter() 
                 {
 			@Override

@@ -11,6 +11,7 @@ package view;
  */
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -62,42 +63,22 @@ public class Balance extends JFrame
 		backButton.setForeground(Color.WHITE);
 		backButton.setFocusPainted(false); //กรอบตัวอักษร
 		backButton.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
-                backButton.addActionListener(new java.awt.event.ActionListener() {
-                    public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        backButtonActionPerformed(evt);
-                    }
-                });
 		getContentPane().add(backButton);
 		
 		withdrawButton = new JButton("Withdraw");
 		withdrawButton.setBounds(542, 428, 181, 47);
-		setButtonStyle(withdrawButton);
-                withdrawButton.addActionListener(new java.awt.event.ActionListener() {
-                    public void actionPerformed(java.awt.event.ActionEvent evt) {
-                       withdrawButtonActionPerformed(evt);
-                    }
-                });
+		setButtonStyle(withdrawButton);;
 		getContentPane().add(withdrawButton);
 		
 		depositButton = new JButton("Deposit");
 		depositButton.setBounds(542, 486, 181, 47);
 		setButtonStyle(depositButton);
-                depositButton.addActionListener(new java.awt.event.ActionListener() {
-                    public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        depositButtonActionPerformed(evt);
-                    }
-                });
 		panel.add(depositButton);
 		getContentPane().add(depositButton);
 		
 		statementButton = new JButton("Statement");
 		statementButton.setBounds(542, 543, 181, 47);
 		setButtonStyle(statementButton);
-                statementButton.addActionListener(new java.awt.event.ActionListener() {
-                    public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        statementButtonActionPerformed(evt);
-                    }
-                });
 		getContentPane().add(statementButton);
 		
 		background = new JLabel("");
@@ -107,16 +88,6 @@ public class Balance extends JFrame
 		panel.setLayout(null);
 	}
         
-        public static void main(String[] args) 
-        {
-		Balance frame = new Balance();
-		frame.setBounds(100, 100, 800, 600);
-                frame.setUndecorated(true);
-                frame. setLocationRelativeTo(null);
-                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                frame.setVisible(true);
-				
-	}
 	
 	public void setButtonStyle(JButton button)
 	{
@@ -125,24 +96,21 @@ public class Balance extends JFrame
 		button.setFocusPainted(false); //กรอบตัวอักษร
 		button.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
 	}
-        private void withdrawButtonActionPerformed(java.awt.event.ActionEvent evt)
-        {                                          
-            new Withdraw().setVisible(true);
-            dispose();
-        } 
-        private void depositButtonActionPerformed(java.awt.event.ActionEvent evt)
-        {                                          
-            new Deposit().setVisible(true);
-            dispose();
+        public void setActionBack(ActionListener act)
+        {
+            backButton.addActionListener(act);
         }
-        private void backButtonActionPerformed(java.awt.event.ActionEvent evt)
-        {                                          
-            new Menu().setVisible(true);
-            dispose();
+        public void setActionWithdraw(ActionListener act)
+        {
+            withdrawButton.addActionListener(act);
         }
-        private void statementButtonActionPerformed(java.awt.event.ActionEvent evt)
-        {                                          
-            new Statement().setVisible(true);
-            dispose();
+        public void setActionDeposit(ActionListener act)
+        {
+            depositButton.addActionListener(act);
         }
+        public void  setActionStatement(ActionListener act)
+        {
+            statementButton.addActionListener(act);
+        }
+   
 }
