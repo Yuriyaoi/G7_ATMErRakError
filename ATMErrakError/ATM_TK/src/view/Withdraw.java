@@ -6,6 +6,7 @@ import atm_tk.storeData;
 import java.awt.Color;
 
 import java.awt.Font;
+import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -50,122 +51,62 @@ public class Withdraw extends JFrame
 		
 		no1 = new JButton("1");
 		no1.setBounds(255, 298, 81, 43);
-		setButtonStyle(no1);
-                no1.addActionListener(new java.awt.event.ActionListener() {
-                    public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        no1ActionPerformed(evt);
-                    }
-                });
+		setButtonStyle(no1); 
 		getContentPane().add(no1);
 		
 		no2 = new JButton("2");
 		no2.setBounds(361, 298, 81, 43);
 		setButtonStyle(no2);
-                no2.addActionListener(new java.awt.event.ActionListener() {
-                    public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        no2ActionPerformed(evt);
-                    }
-                });
 		getContentPane().add(no2);
 		
 		no3 = new JButton("3");
 		no3.setBounds(465, 298, 81, 43);
 		setButtonStyle(no3);
-                no3.addActionListener(new java.awt.event.ActionListener() {
-                    public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        no3ActionPerformed(evt);
-                    }
-                });
 		getContentPane().add(no3);
 		
 		no4 = new JButton("3");
 		no4.setBounds(255, 352, 81, 43);
 		setButtonStyle(no4);
-                no4.addActionListener(new java.awt.event.ActionListener() {
-                    public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        no4ActionPerformed(evt);
-                    }
-                });
 		getContentPane().add(no4);
 		
 		no5 = new JButton("5");
 		no5.setBounds(361, 352, 81, 43);
 		setButtonStyle(no5);
-                no5.addActionListener(new java.awt.event.ActionListener() {
-                    public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        no5ActionPerformed(evt);
-                    }
-                });
 		getContentPane().add(no5);
 		
 		no6 = new JButton("6");
 		no6.setBounds(465, 352, 81, 43);
 		setButtonStyle(no6);
-                no6.addActionListener(new java.awt.event.ActionListener() {
-                    public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        no6ActionPerformed(evt);
-                    }
-                });
 		getContentPane().add(no6);
 		
 		no7 = new JButton("7");
 		no7.setBounds(255, 406, 81, 43);
 		setButtonStyle(no7);
-                no7.addActionListener(new java.awt.event.ActionListener() {
-                    public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        no7ActionPerformed(evt);
-                    }
-                });
 		getContentPane().add(no7);
 		
                 no8 = new JButton("8");
                 no8.setBounds(361, 406, 81, 43);
                 setButtonStyle(no8);
-                no8.addActionListener(new java.awt.event.ActionListener() {
-                    public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        no8ActionPerformed(evt);
-                    }
-                });
 		getContentPane().add(no8);
 		
 		no9 = new JButton("9");
 		no9.setBounds(465, 406, 81, 43);
 		setButtonStyle(no9);
-                no9.addActionListener(new java.awt.event.ActionListener() {
-                    public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        no9ActionPerformed(evt);
-                    }
-                });
 		getContentPane().add(no9);
 		
 		reset = new JButton("Reset");
 		reset.setBounds(234, 465, 102, 33);
-		setButtonStyle(reset);
-                reset.addActionListener(new java.awt.event.ActionListener() {
-                    public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        resetActionPerformed(evt);
-                    }
-                });
+		setButtonStyle(reset);         
 		getContentPane().add(reset);
 		
 		no0 = new JButton("0");
 		no0.setBounds(361, 460, 81, 43);
-		setButtonStyle(no0);
-                no0.addActionListener(new java.awt.event.ActionListener() {
-                    public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        no0ActionPerformed(evt);
-                    }
-                });
+		setButtonStyle(no0);             
 		getContentPane().add(no0);
 		
 		delete = new JButton("Delete");
 		delete.setBounds(465, 465, 109, 33);
 		setButtonStyle(delete);
-                delete.addActionListener(new java.awt.event.ActionListener() {
-                    public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        deleteActionPerformed(evt);
-                    }
-                });
 		getContentPane().add(delete);
 		
 		enter = new JButton("Enter");
@@ -179,11 +120,6 @@ public class Withdraw extends JFrame
 		back.setForeground(Color.WHITE);
 		back.setFocusPainted(false); //กรอบตัวอักษร
 		back.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
-                back.addActionListener(new java.awt.event.ActionListener() {
-                    public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        backButtonActionPerformed(evt);
-                    }
-                });
 		getContentPane().add(back);
 		
 		amountLabel = new JLabel("");
@@ -200,16 +136,7 @@ public class Withdraw extends JFrame
 		panel.setLayout(null);
 		
 	}
-//        public static void main(String[] args) 
-//        {
-//		Withdraw frame = new Withdraw();
-//		frame.setBounds(100, 100, 800, 600);
-//                frame.setUndecorated(true);
-//                frame. setLocationRelativeTo(null);
-//                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//                frame.setVisible(true);
-//				
-//	}
+
 	public void setButtonStyle(JButton button)
 	{
 		button.setBackground(new Color(229, 211, 169));
@@ -217,72 +144,111 @@ public class Withdraw extends JFrame
 		button.setFocusPainted(false); //กรอบตัวอักษร
 		button.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
 	}
-        private void backButtonActionPerformed(java.awt.event.ActionEvent evt)
-        {                                          
-            new Menu().setVisible(true);
-            dispose();
-        } 
-        private void no1ActionPerformed(java.awt.event.ActionEvent evt) 
-        {                                    
-            amountLabel.setText(amountLabel.getText()+1);
-        } 
-        private void no2ActionPerformed(java.awt.event.ActionEvent evt) 
-        {                                    
-            amountLabel.setText(amountLabel.getText()+2);
-        }                                   
-
-        private void no3ActionPerformed(java.awt.event.ActionEvent evt) 
-        {                                    
-            amountLabel.setText(amountLabel.getText()+3);
-        }                                   
-
-        private void no4ActionPerformed(java.awt.event.ActionEvent evt) 
-        {                                    
-            amountLabel.setText(amountLabel.getText()+4);
-        }                                   
-
-        private void no5ActionPerformed(java.awt.event.ActionEvent evt) 
-        {                                    
-            amountLabel.setText(amountLabel.getText()+5);
-        }                                   
-
-        private void no6ActionPerformed(java.awt.event.ActionEvent evt) 
-        {                                    
-            amountLabel.setText(amountLabel.getText()+6);
-        }                                   
-
-        private void no7ActionPerformed(java.awt.event.ActionEvent evt) 
-        {                                    
-            amountLabel.setText(amountLabel.getText()+7);
-        }                                   
-
-        private void no8ActionPerformed(java.awt.event.ActionEvent evt) 
-        {                                    
-            amountLabel.setText(amountLabel.getText()+8);
-        }                                   
-
-        private void no9ActionPerformed(java.awt.event.ActionEvent evt) 
-        {                                    
-            amountLabel.setText(amountLabel.getText()+9);
-        }                                   
-
-        private void no0ActionPerformed(java.awt.event.ActionEvent evt) 
-        {                                    
-            amountLabel.setText(amountLabel.getText()+0);
-        }                                   
-
-        private void resetActionPerformed(java.awt.event.ActionEvent evt) 
-        {                                      
-            amountLabel.setText("");
-        }                                     
-
-        private void deleteActionPerformed(java.awt.event.ActionEvent evt) 
-        {                                    
-            String s = amountLabel.getText();
-            if(s.length()>=1) {
-               amountLabel.setText(s.substring(0,s.length()-1));
-            }
-        }                                   
+        public void setActionBack(ActionListener act)
+        {
+            back.addActionListener(act);
+        }
+        public void setActionNo1(ActionListener act)
+        {
+            no1.addActionListener(act);
+        }
+        public void setActionNo2(ActionListener act)
+        {
+            no2.addActionListener(act);
+        }
+        public void setActionNo3(ActionListener act)
+        {
+            no3.addActionListener(act);
+        }
+        public void setActionNo4(ActionListener act)
+        {
+            no4.addActionListener(act);
+        }
+        public void setActionNo5(ActionListener act)
+        {
+            no5.addActionListener(act);
+        }
+        public void setActionNo6(ActionListener act)
+        {
+            no6.addActionListener(act);
+        }
+        public void setActionNo7(ActionListener act)
+        {
+            no7.addActionListener(act);
+        }
+        public void setActionNo8(ActionListener act)
+        {
+            no8.addActionListener(act);
+        }
+        public void setActionNo9(ActionListener act)
+        {
+            no9.addActionListener(act);
+        }
+        public void setActionNo0(ActionListener act)
+        {
+            no0.addActionListener(act);
+        }
+//        private void no1ActionPerformed(java.awt.event.ActionEvent evt) 
+//        {                                    
+//            amountLabel.setText(amountLabel.getText()+1);
+//        } 
+//        private void no2ActionPerformed(java.awt.event.ActionEvent evt) 
+//        {                                    
+//            amountLabel.setText(amountLabel.getText()+2);
+//        }                                   
+//
+//        private void no3ActionPerformed(java.awt.event.ActionEvent evt) 
+//        {                                    
+//            amountLabel.setText(amountLabel.getText()+3);
+//        }                                   
+//
+//        private void no4ActionPerformed(java.awt.event.ActionEvent evt) 
+//        {                                    
+//            amountLabel.setText(amountLabel.getText()+4);
+//        }                                   
+//
+//        private void no5ActionPerformed(java.awt.event.ActionEvent evt) 
+//        {                                    
+//            amountLabel.setText(amountLabel.getText()+5);
+//        }                                   
+//
+//        private void no6ActionPerformed(java.awt.event.ActionEvent evt) 
+//        {                                    
+//            amountLabel.setText(amountLabel.getText()+6);
+//        }                                   
+//
+//        private void no7ActionPerformed(java.awt.event.ActionEvent evt) 
+//        {                                    
+//            amountLabel.setText(amountLabel.getText()+7);
+//        }                                   
+//
+//        private void no8ActionPerformed(java.awt.event.ActionEvent evt) 
+//        {                                    
+//            amountLabel.setText(amountLabel.getText()+8);
+//        }                                   
+//
+//        private void no9ActionPerformed(java.awt.event.ActionEvent evt) 
+//        {                                    
+//            amountLabel.setText(amountLabel.getText()+9);
+//        }                                   
+//
+//        private void no0ActionPerformed(java.awt.event.ActionEvent evt) 
+//        {                                    
+//            amountLabel.setText(amountLabel.getText()+0);
+//        }                                   
+//
+//        private void resetActionPerformed(java.awt.event.ActionEvent evt) 
+//        {                                      
+//            amountLabel.setText("");
+//        }                                     
+//
+//        private void deleteActionPerformed(java.awt.event.ActionEvent evt) 
+//        {                                    
+//            String s = amountLabel.getText();
+//            if(s.length()>=1) {
+//               amountLabel.setText(s.substring(0,s.length()-1));
+//            }
+//        }                                   
 //        private void enterActionPerformed(java.awt.event.ActionEvent evt) {                                    
 //            int num1 = Integer.parseInt(storeData.balance); // set balance(String) convert to nums(int) 
 //            int num2 = 0; // set num2 = 0

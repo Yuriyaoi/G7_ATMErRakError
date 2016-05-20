@@ -17,10 +17,9 @@ import view.Menu;
  */
     public class LoginControl {
         private Login display;
-        private Menu menu;
+        private MenuControl menu;
         public LoginControl(){
            display = new Login();
-           menu = new Menu();
            display.setActionLogIn(new LogInButtonAction());
            display.setVisible(true);
         } 
@@ -30,7 +29,9 @@ import view.Menu;
 
         private class LogInButtonAction implements ActionListener{
             public void actionPerformed(ActionEvent e) {
-                menu.setVisible(true);
+                menu = new MenuControl();
+                //menu.setVisible(true);
+                display.dispose();
             }
         }
 

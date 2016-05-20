@@ -2,6 +2,7 @@ package view;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -55,11 +56,6 @@ public class  BillPayment extends JFrame
 		back.setForeground(Color.WHITE);
 		back.setFocusPainted(false); //กรอบตัวอักษร
 		back.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
-                back.addActionListener(new java.awt.event.ActionListener() {
-                    public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        backButtonActionPerformed(evt);
-                    }
-                });
 		panel.add(back);
 		
 		background = new JLabel("");
@@ -73,11 +69,10 @@ public class  BillPayment extends JFrame
                 setLocationRelativeTo(null);
                 setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}   
-        private void backButtonActionPerformed(java.awt.event.ActionEvent evt)
-        {                                          
-            new Menu().setVisible(true);
-            dispose();
-        } 
+        public void setActionBack(ActionListener act)
+        {
+            back.addActionListener(act);
+        }
 }
 
 

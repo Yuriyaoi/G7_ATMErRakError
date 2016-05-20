@@ -3,6 +3,7 @@ package view;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Font;
+import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -31,33 +32,17 @@ public class Menu extends JFrame {
 		withdrawButton = new JButton("Withdraw");
 		withdrawButton.setBounds(0, 251, 230, 49); // x = 88 ,width = 168 
                 withdrawButton.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
-                withdrawButton.addActionListener(new java.awt.event.ActionListener() {
-                    public void actionPerformed(java.awt.event.ActionEvent evt) {
-                       withdrawButtonActionPerformed(evt);
-                    }
-                });
 		setButtonStyle(withdrawButton);
-
 		panel.add(withdrawButton);
 		
 		balanceButton = new JButton("Check Balance");
 		balanceButton.setBounds(0, 437, 230, 49); 
-		panel.add(balanceButton);
-                balanceButton.addActionListener(new java.awt.event.ActionListener() {
-                    public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        balanceButtonActionPerformed(evt);
-                    }
-                });
+		panel.add(balanceButton);;
 		setButtonStyle(balanceButton);
 		
 		depositButton = new JButton("Deposit ");
 		depositButton.setBounds(0, 349, 230, 49);
 		setButtonStyle(depositButton);
-                depositButton.addActionListener(new java.awt.event.ActionListener() {
-                    public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        depositButtonActionPerformed(evt);
-                    }
-                });
 		panel.add(depositButton);
 		
 		donateButton = new JButton("Donate");
@@ -68,11 +53,6 @@ public class Menu extends JFrame {
                 payBillButton = new JButton("Pay Bill");
 		payBillButton.setBounds(569, 344, 230, 49);
 		setButtonStyle(payBillButton);
-                payBillButton.addActionListener(new java.awt.event.ActionListener() {
-                    public void actionPerformed(java.awt.event.ActionEvent evt) {
-                         payBillButtonActionPerformed(evt);
-                    }
-                });
 		panel.add(payBillButton);
 		
 		logoutButton = new JButton("Logout");
@@ -83,12 +63,6 @@ public class Menu extends JFrame {
                 //logoutButton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
                 //logoutButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 		logoutButton.setBounds(569, 437, 230, 49);
-                logoutButton.addActionListener(new java.awt.event.ActionListener() {
-                    public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        dispose();
-                    }
-                });
-
 		panel.add(logoutButton);
 		
 		background = new JLabel("");
@@ -114,30 +88,45 @@ public class Menu extends JFrame {
                 button.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
 		button.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
 	}
-        private void withdrawButtonActionPerformed(java.awt.event.ActionEvent evt)
-        {                                          
-            new Withdraw().setVisible(true);
-            dispose();
-        } 
-        private void depositButtonActionPerformed(java.awt.event.ActionEvent evt)
-        {                                          
-            new Deposit().setVisible(true);
-            dispose();
-        } 
-         private void balanceButtonActionPerformed(java.awt.event.ActionEvent evt)
-        {                                          
-            new Balance().setVisible(true);
-            dispose();
-        } 
+        public void setActionWithdraw(ActionListener act){
+            withdrawButton.addActionListener(act);
+        }
+        public void setActionDeposit(ActionListener act){
+            depositButton.addActionListener(act);
+        }
+        public void setActionBalance(ActionListener act){
+            balanceButton.addActionListener(act);
+        }
+        public void setActionLogout(ActionListener act){
+            logoutButton.addActionListener(act);
+        }
+        public void setActionBillPayment(ActionListener act){
+            payBillButton.addActionListener(act);
+        }
+//        private void withdrawButtonActionPerformed(java.awt.event.ActionEvent evt)
+//        {                                          
+//            new Withdraw().setVisible(true);
+//            dispose();
+//        } 
+//        private void depositButtonActionPerformed(java.awt.event.ActionEvent evt)
+//        {                                          
+//            new Deposit().setVisible(true);
+//            dispose();
+//        } 
+//         private void balanceButtonActionPerformed(java.awt.event.ActionEvent evt)
+//        {                                          
+//            new Balance().setVisible(true);
+//            dispose();
+//        } 
 //        private void donateButtonActionPerformed(java.awt.event.ActionEvent evt)
 //        {                                          
 //            new Menu().setVisible(true);
 //            dispose();
 //        } 
-        private void payBillButtonActionPerformed(java.awt.event.ActionEvent evt)
-        {                                          
-            new BillPayment().setVisible(true);
-            dispose();
-        } 
+//        private void payBillButtonActionPerformed(java.awt.event.ActionEvent evt)
+//        {                                          
+//            new BillPayment().setVisible(true);
+//            dispose();
+//        } 
 }
 

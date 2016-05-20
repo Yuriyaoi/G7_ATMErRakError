@@ -12,6 +12,7 @@ package view;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -39,6 +40,7 @@ public class Deposit extends JFrame
 	private JButton no9;
 	private JButton enter;
 	private JButton reset;	
+        //private JButton back;
 	
 	public Deposit() 
         {
@@ -177,17 +179,12 @@ public class Deposit extends JFrame
 		setButtonStyle(enter);
 		getContentPane().add(enter);
 		
-		JButton back = new JButton("Back");
+		back = new JButton("back");
 		back.setBounds(15, 535, 109, 33);
 		back.setBackground(new Color(85, 85, 85));
 		back.setForeground(Color.WHITE);
 		back.setFocusPainted(false); //กรอบตัวอักษร
 		back.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
-                back.addActionListener(new java.awt.event.ActionListener() {
-                    public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        backButtonActionPerformed(evt);
-                    }
-                });
 		getContentPane().add(back);
 		
 		amountLabel = new JLabel("");
@@ -203,17 +200,6 @@ public class Deposit extends JFrame
 		panel.setLayout(null);
 		
 	}
-        public static void main(String[] args) 
-        {	
-                Deposit frame = new Deposit();
-                frame.setBounds(100, 100, 800, 600);
-                frame.setUndecorated(true);
-                frame. setLocationRelativeTo(null);
-                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                frame.setVisible(true);
-				
-	}
-
 	public void setButtonStyle(JButton button)
 	{
                 button.setBackground(new Color(229, 211, 169));
@@ -221,10 +207,10 @@ public class Deposit extends JFrame
 		button.setFocusPainted(false); //กรอบตัวอักษร
 		button.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
 	}
-        private void backButtonActionPerformed(java.awt.event.ActionEvent evt)
-        {                                          
-            new Menu().setVisible(true);
-            dispose();
+        
+        public void setActionbackButton(ActionListener act)
+        {
+            back.addActionListener(act);
         }
         private void no1ActionPerformed(java.awt.event.ActionEvent evt) 
         {                                    
