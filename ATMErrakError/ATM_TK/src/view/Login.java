@@ -17,6 +17,7 @@ import javax.swing.JPasswordField;
 import javax.swing.SwingConstants;
 import controller.*;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 
 public class Login extends JFrame 
 {
@@ -93,6 +94,16 @@ public class Login extends JFrame
         
         public void setActionLogIn(ActionListener act){
             loginButton.addActionListener(act);
+        }
+        
+        public String getUsername(){
+            return usernameField.getText();
+        }
+        public String getPassword(){
+            return passwordField.getText();
+        }
+        public void showPopUp(String message){
+            JOptionPane.showMessageDialog(null, message);
         }
 //        private void loginButtonActionPerformed(java.awt.event.ActionEvent evt)
 //        {                                          

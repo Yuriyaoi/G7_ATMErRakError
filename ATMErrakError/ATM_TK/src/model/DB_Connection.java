@@ -5,6 +5,9 @@
  */
 package model;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 /**
  *
  * @author Yuri
@@ -12,8 +15,8 @@ package model;
 public interface DB_Connection{
     public void connection();
     public void disconnection();
-    public void insert();
-    public void update();
-    public void delete();
-    public void select();
+    public void insert(String sql);
+    public void update(String sql);
+    public void delete(String sql);
+    public ArrayList<HashMap> select(String sql);
 }

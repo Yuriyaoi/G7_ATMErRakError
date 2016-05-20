@@ -7,6 +7,7 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import model.Authentication;
 import view.LogIn_View;
 import view.Login;
 import view.Menu;
@@ -18,6 +19,9 @@ import view.Menu;
     public class LoginControl {
         private Login display;
         private Menu menu;
+        private Authentication authen;
+        private String username;
+        private String password;
         public LoginControl(){
            display = new Login();
            menu = new Menu();
@@ -27,10 +31,21 @@ import view.Menu;
         public static void main(String[] args) {
             new LoginControl();
         }
+        
+        
 
         private class LogInButtonAction implements ActionListener{
             public void actionPerformed(ActionEvent e) {
-                menu.setVisible(true);
+                username = display.getUsername();
+                password = display.getPassword();
+                authen = new Authentication();
+                if(authen.loginSuccess(username, password)){
+                    menu.setVisible(true);
+                    display.dispose();
+                } else{
+                    display.showPopUp("Wrong Username or Password");
+                }
+                    
             }
         }
 
