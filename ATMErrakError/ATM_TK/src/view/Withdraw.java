@@ -20,7 +20,7 @@ public class Withdraw extends JFrame
 {
 
 	private JPanel panel;
-	private JLabel amountLabel;
+        private JLabel amountLabel;
 	private JButton back;
 	private JButton delete;
 	private JButton no0;
@@ -64,7 +64,7 @@ public class Withdraw extends JFrame
 		setButtonStyle(no3);
 		getContentPane().add(no3);
 		
-		no4 = new JButton("3");
+		no4 = new JButton("4");
 		no4.setBounds(255, 352, 81, 43);
 		setButtonStyle(no4);
 		getContentPane().add(no4);
@@ -136,7 +136,14 @@ public class Withdraw extends JFrame
 		panel.setLayout(null);
 		
 	}
-
+        public void setAmount(String amount)
+        {
+            this.amountLabel.setText(amount);
+        }
+        public String getAmount()
+        {
+            return this.amountLabel.getText();
+        }
 	public void setButtonStyle(JButton button)
 	{
 		button.setBackground(new Color(229, 211, 169));
@@ -144,6 +151,7 @@ public class Withdraw extends JFrame
 		button.setFocusPainted(false); //กรอบตัวอักษร
 		button.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
 	}
+
         public void setActionBack(ActionListener act)
         {
             back.addActionListener(act);
@@ -188,67 +196,15 @@ public class Withdraw extends JFrame
         {
             no0.addActionListener(act);
         }
-//        private void no1ActionPerformed(java.awt.event.ActionEvent evt) 
-//        {                                    
-//            amountLabel.setText(amountLabel.getText()+1);
-//        } 
-//        private void no2ActionPerformed(java.awt.event.ActionEvent evt) 
-//        {                                    
-//            amountLabel.setText(amountLabel.getText()+2);
-//        }                                   
-//
-//        private void no3ActionPerformed(java.awt.event.ActionEvent evt) 
-//        {                                    
-//            amountLabel.setText(amountLabel.getText()+3);
-//        }                                   
-//
-//        private void no4ActionPerformed(java.awt.event.ActionEvent evt) 
-//        {                                    
-//            amountLabel.setText(amountLabel.getText()+4);
-//        }                                   
-//
-//        private void no5ActionPerformed(java.awt.event.ActionEvent evt) 
-//        {                                    
-//            amountLabel.setText(amountLabel.getText()+5);
-//        }                                   
-//
-//        private void no6ActionPerformed(java.awt.event.ActionEvent evt) 
-//        {                                    
-//            amountLabel.setText(amountLabel.getText()+6);
-//        }                                   
-//
-//        private void no7ActionPerformed(java.awt.event.ActionEvent evt) 
-//        {                                    
-//            amountLabel.setText(amountLabel.getText()+7);
-//        }                                   
-//
-//        private void no8ActionPerformed(java.awt.event.ActionEvent evt) 
-//        {                                    
-//            amountLabel.setText(amountLabel.getText()+8);
-//        }                                   
-//
-//        private void no9ActionPerformed(java.awt.event.ActionEvent evt) 
-//        {                                    
-//            amountLabel.setText(amountLabel.getText()+9);
-//        }                                   
-//
-//        private void no0ActionPerformed(java.awt.event.ActionEvent evt) 
-//        {                                    
-//            amountLabel.setText(amountLabel.getText()+0);
-//        }                                   
-//
-//        private void resetActionPerformed(java.awt.event.ActionEvent evt) 
-//        {                                      
-//            amountLabel.setText("");
-//        }                                     
-//
-//        private void deleteActionPerformed(java.awt.event.ActionEvent evt) 
-//        {                                    
-//            String s = amountLabel.getText();
-//            if(s.length()>=1) {
-//               amountLabel.setText(s.substring(0,s.length()-1));
-//            }
-//        }                                   
+        public void setActionReset(ActionListener act)
+        {
+            reset.addActionListener(act);
+        }
+        public void setActionDelete(ActionListener act)
+        {
+            delete.addActionListener(act);
+        }
+//                                 
 //        private void enterActionPerformed(java.awt.event.ActionEvent evt) {                                    
 //            int num1 = Integer.parseInt(storeData.balance); // set balance(String) convert to nums(int) 
 //            int num2 = 0; // set num2 = 0
