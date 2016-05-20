@@ -18,7 +18,6 @@ import view.Menu;
  */
     public class LoginControl {
         private Login display;
-        private Menu menu;
         private Authentication authen;
         private String username;
         private String password;
@@ -36,19 +35,16 @@ import view.Menu;
 
         private class LogInButtonAction implements ActionListener{
             public void actionPerformed(ActionEvent e) {
+
                 username = display.getUsername();
                 password = display.getPassword();
                 authen = new Authentication();
                 if(authen.loginSuccess(username, password)){
-                    menu.setVisible(true);
+                    menu = new MenuControl();
                     display.dispose();
                 } else{
                     display.showPopUp("Wrong Username or Password");
-                }
-                    
-                menu = new MenuControl();
-                //menu.setVisible(true);
-                display.dispose();
+                }                 
             }
         }
 
