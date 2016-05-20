@@ -17,6 +17,7 @@ public class Authentication {
         
     }
     private boolean logInSuccess(String user , String password){
+        boolean success;
         String output = "";
         String sql = "SELECT * FROM `ATM_Customer` ";
         ArrayList<HashMap> list = db.queryRows(sql);
@@ -37,7 +38,7 @@ public class Authentication {
                 output = "Wrong User";
             }
         }
-        return output;
+        return success;
     }
     
     public void checkUsername(String user){

@@ -5,6 +5,9 @@
  */
 package model;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import edu.sit.cs.db.CSDbDelegate;
 /**
  *
  * @author Yuri
@@ -14,4 +17,11 @@ public class AssignData {
     SQL_Connection db;
     //get an arraylist from selected statements then convert to String
     //assign String to dataStore class
+    public ArrayList<HashMap> getUserPass(){
+        String sql = "SELECT 'Customer_ID' FROM `ATM_Customer` WHERE ";
+        ArrayList<HashMap> list = db.queryRows(sql);
+        for(HashMap l : list){
+            
+        }
+    }
 }

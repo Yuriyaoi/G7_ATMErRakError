@@ -16,6 +16,7 @@ import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.SwingConstants;
 import controller.*;
+import java.awt.event.ActionListener;
 
 public class Login extends JFrame 
 {
@@ -59,11 +60,7 @@ public class Login extends JFrame
 		loginButton.setFocusPainted(false); //กรอบตัวอักษร
 		loginButton.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
 		loginButton.setBounds(339, 429, 112, 48);
-                loginButton.addActionListener(new java.awt.event.ActionListener() {
-                    public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        loginButtonActionPerformed(evt);
-                }
-                });
+
 		panel.add(loginButton);
 		
 		closeButton = new JLabel();
@@ -93,10 +90,14 @@ public class Login extends JFrame
                 setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 setVisible(true);
 	}   
-        private void loginButtonActionPerformed(java.awt.event.ActionEvent evt)
-        {                                          
-            new Menu().setVisible(true);
-            dispose();
-        }   
+        
+        public void setActionLogIn(ActionListener act){
+            loginButton.addActionListener(act);
+        }
+//        private void loginButtonActionPerformed(java.awt.event.ActionEvent evt)
+//        {                                          
+//            new Menu().setVisible(true);
+//            dispose();
+//        }   
 }
 
