@@ -19,7 +19,7 @@ public class Menu extends JFrame {
 	private JButton balanceButton;
 	private JButton depositButton;
 	private JButton donateButton;
-        private JButton payBillButton;
+        private JButton moreServiceButton;
 	private JButton logoutButton;
         private JButton AddCustom;
 
@@ -50,10 +50,10 @@ public class Menu extends JFrame {
 		setButtonStyle(donateButton);
 		panel.add(donateButton);
                 
-                payBillButton = new JButton("Pay Bill");
-		payBillButton.setBounds(569, 344, 230, 49);
-		setButtonStyle(payBillButton);
-		panel.add(payBillButton);
+                moreServiceButton = new JButton("More Service");
+		moreServiceButton.setBounds(569, 344, 230, 49);
+		setButtonStyle(moreServiceButton);
+		panel.add(moreServiceButton);
 		
 		logoutButton = new JButton("Logout");
 		logoutButton.setBackground(new Color(85, 85, 85));
@@ -100,8 +100,11 @@ public class Menu extends JFrame {
         public void setActionLogout(ActionListener act){
             logoutButton.addActionListener(act);
         }
-        public void setActionBillPayment(ActionListener act){
-            payBillButton.addActionListener(act);
+        public void setActionMoreService(ActionListener act){
+            moreServiceButton.addActionListener(act);
+        }
+        public void setActionDonate(ActionListener act){
+            donateButton.addActionListener(act);
         }
 //        private void withdrawButtonActionPerformed(java.awt.event.ActionEvent evt)
 //        {                                          

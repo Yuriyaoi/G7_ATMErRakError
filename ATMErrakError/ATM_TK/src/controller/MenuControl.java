@@ -2,31 +2,27 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import view.LogIn_View;
-import view.Login;
 import view.Menu;
-import view.Withdraw;
-import view.Deposit;
-import view.Balance;
-import view.Login;
-import view.Donate;
-import view.BillPayment;
+
 
 public class MenuControl {
     private Menu menu;
     private WithdrawControl withdrawControl;
     private DepositControl depositControl;
     private BalanceControl balanceControl;
-//    private DonateControl donate;
+    private DonateControl donateControl;
     private LoginControl loginControl;
     private BillPaymentControl billPaymentControl;
+    private MoreServiceControl moreServiceControl;
     public MenuControl(){
         menu = new Menu();
         menu.setActionWithdraw(new withdrawButtonAction());
         menu.setActionDeposit(new depositButtonAction());
         menu.setActionBalance(new balanceButtonAction());
         menu.setActionLogout(new logoutButtonAction());
-        menu.setActionBillPayment(new billPaymentButtonAction());
+        menu.setActionMoreService(new moreServiceButtonAction());
+        menu.setActionDonate
+        (new donateButtonAction());
         //System.out.println("pp");
         menu.setVisible(true);
     }    
@@ -65,11 +61,19 @@ public class MenuControl {
             menu.dispose();
         }
     }
-    private class billPaymentButtonAction implements ActionListener
+    private class moreServiceButtonAction implements ActionListener
     {
         public void actionPerformed(ActionEvent e)              
         {
-            billPaymentControl = new BillPaymentControl();
+            moreServiceControl = new MoreServiceControl();
+            menu.dispose();
+        }
+    }
+    private class donateButtonAction implements ActionListener
+    {
+        public void actionPerformed(ActionEvent e)              
+        {
+            donateControl = new DonateControl();
             menu.dispose();
         }
     }

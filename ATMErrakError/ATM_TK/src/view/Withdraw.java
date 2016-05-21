@@ -39,16 +39,10 @@ public class Withdraw extends JFrame
                 
 	public Withdraw()
         {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 800, 600);
 		panel = new JPanel();
 		panel.setBorder(new EmptyBorder(5, 5, 5, 5));
-		
-		
-		setUndecorated(true);
-		setLocationRelativeTo(null);
-		getContentPane().setLayout(null);
-		
+                panel.setLayout(null);
+                
 		no1 = new JButton("1");
 		no1.setBounds(255, 298, 81, 43);
 		setButtonStyle(no1); 
@@ -133,8 +127,12 @@ public class Withdraw extends JFrame
                 background.setIcon(new ImageIcon(getClass().getResource("/image/Withdraw.png")));
 		background.setBounds(0, 0, 800, 600);
 		getContentPane().add(background);
-		panel.setLayout(null);
-		
+                
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 800, 600);
+		setUndecorated(true);
+		setLocationRelativeTo(null);
+		getContentPane().setLayout(null);
 	}
         public void setAmount(String amount)
         {
