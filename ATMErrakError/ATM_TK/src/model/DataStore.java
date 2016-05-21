@@ -7,7 +7,7 @@ package model;
 
 /**
  *
- * @author cs
+ * @author csSawasdithep
  */
 public class DataStore {
     static String id, password, name, balance;
