@@ -140,6 +140,7 @@ public class Withdraw extends JFrame
         {
             this.amountLabel.setText(amount);
         }
+
         public String getAmount()
         {
             return this.amountLabel.getText();
@@ -204,42 +205,18 @@ public class Withdraw extends JFrame
         {
             delete.addActionListener(act);
         }
-//                                 
-//        private void enterActionPerformed(java.awt.event.ActionEvent evt) {                                    
-//            int num1 = Integer.parseInt(storeData.balance); // set balance(String) convert to nums(int) 
-//            int num2 = 0; // set num2 = 0
-//            int change;
-//            if(amountLabel.getText().length()>=1 && amountLabel.getText().length()<=10) { // des2 must have 1 to 10 length
-//               num2 = Integer.parseInt(amountLabel.getText());      // because int can get 10 digit of number (or) billion
-//              // get des2(text) text to num2
-//            } else if(amountLabel.getText().length() > 10) { // des2 length more than 10
-//               JOptionPane.showMessageDialog(null, "It's too much AMOUNT!!"); 
-//               amountLabel.setText("");  
-//            }
-//
-//            if(num2==0) { // num2 equal 0 (or) num2 isn't declared by des2(text)
-//               JOptionPane.showMessageDialog(null, "Please insert MONEY!!");
-//               amountLabel.setText("");
-//            } else if(num2 <= 100000) { // num2 must lower equal 100,000
-//                if(num2>0 && (num2%20==0||num2%50==0||num2%70==0)) { // if num2 inform of BANKNOTE 70 = 50 + 20
-//                    change = num2+ num1;
-//                    storeData.balance = Integer.toString(change);
-//                    getDB.updateDB();
-//                    getDB.updateStatement_De(amountLabel.getText());
-//                    JOptionPane.showMessageDialog(null, "\nID : "+storeData.user+"\n"
-//                            + "\nName : "+storeData.name+"\n"
-//                            + "\nMode : Deposit\n"
-//                            + "\nAmount : " + num2 +"\n"
-//                            + "\nBalance : " + storeData.balance +"\n");
-//                    in.setVisible(true);
-//                    this.dispose();
-//                } else if(!(num2%20==0||num2%50==0||num2%70==0)){ // if NOT BANKNOTE!!
-//                    JOptionPane.showMessageDialog(null, "Plese insert correct money in the form of BANKNOTE!!");
-//                    amountLabel.setText("");
-//                } 
-//            } else { // more than 100,000 about(100,001 to billion)
-//                JOptionPane.showMessageDialog(null, "Cannot insert AMOUNT more than 100,000 Baht!!");
-//                amountLabel.setText("");
-//      }      
+        public void setActionEnter(ActionListener act)
+        {
+            enter.addActionListener(act);
+        }
+        public void showPopUp(String message){
+            JOptionPane.showMessageDialog(null, message);
+        }
+        public int askConfirm(String message, String title){
+            int reply;
+            reply = JOptionPane.showConfirmDialog(null, message, title, JOptionPane.YES_NO_OPTION);
+            return reply;
+        }
+
                  
 }

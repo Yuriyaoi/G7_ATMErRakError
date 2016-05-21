@@ -151,24 +151,15 @@ public class Deposit extends JFrame
         public void setActionbackButton(ActionListener act)
         {
             back.addActionListener(act);
-        public void setAmount(String amount)
-        {
-            this.amountLabel.setText(amount);
         }
         public void setAmount(String amount)
         {
             this.amountLabel.setText(amount);
         }
+
         public String getAmount()
         {
             return this.amountLabel.getText();
-        public String getAmount()
-        {
-            return this.amountLabel.getText();
-        }
-        public void setActionbackButton(ActionListener act)
-        {
-            back.addActionListener(act);
         }
         public void setActionNo1(ActionListener act)
         {

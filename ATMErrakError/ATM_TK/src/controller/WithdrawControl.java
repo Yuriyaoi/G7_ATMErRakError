@@ -2,15 +2,21 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
+import model.GetData;
+import model.Transaction;
 import view.Login;
 import view.Withdraw;
 public class WithdrawControl 
 {
     private Withdraw withdraw;
         private MenuControl menu;
-        
+        private Transaction transaction;
+        private GetData getData;
         public WithdrawControl(){
            withdraw = new Withdraw();
+           transaction = new Transaction();
+           getData = new GetData();
            withdraw.setActionBack(new backButtonAction());
            withdraw.setActionNo1(new no1ButtonAction());
            withdraw.setActionNo2(new no2ButtonAction());
@@ -24,6 +30,7 @@ public class WithdrawControl
            withdraw.setActionNo0(new no0ButtonAction());
            withdraw.setActionReset(new resetButtonAction());
            withdraw.setActionDelete(new deleteButtonAction());
+           withdraw.setActionEnter(new enterButtonAction());
            
            withdraw.setVisible(true);
         } 
@@ -34,7 +41,6 @@ public class WithdrawControl
         private class backButtonAction implements ActionListener{
             public void actionPerformed(ActionEvent e) {
                 menu = new MenuControl();
-                //menu.setVisible(true);
                 withdraw.dispose();
             }
         }
@@ -137,4 +143,41 @@ public class WithdrawControl
                 }
             }
         }
+        
+        private class enterButtonAction implements ActionListener
+        {
+            public void actionPerformed(ActionEvent e) 
+            {
+                //withdraw money not more than 100,000 and your must be banknote
+                int amount;
+                try{
+                    amount = Integer.parseInt(withdraw.getAmount());
+                    if(transaction.checkAmount(amount)){
+                        if(transaction.checkBankNote(amount)){
+                            if(transaction.checkLimit(amount)){
+                                transaction.withdraw(amount);
+                                transaction.updateStatement(getData.getLastestStateNo(), "Withdraw", amount);
+                                withdraw.showPopUp("Withdraw successfully");
+                                withdraw.setAmount("");
+                                if (withdraw.askConfirm("Do you want to withdraw more?", "") == JOptionPane.NO_OPTION){
+                                    menu = new MenuControl();
+                                }
+                            } else{
+                                withdraw.showPopUp("More than your current balance");
+                            }
+                        } else{
+                            withdraw.showPopUp("Cannot be given as a banknote");
+                        }
+                    } else{
+                        withdraw.showPopUp("Sorry, we limit 20000 Baht per one withdraw");
+                        withdraw.setAmount("20000");
+                    }
+                } catch(NumberFormatException num){
+                        amount = 20000;
+                        withdraw.showPopUp("Sorry, we limit 20000 Baht per one withdraw");
+                        withdraw.setAmount(amount+"");
+                  }
+            }
+        }
 }
+

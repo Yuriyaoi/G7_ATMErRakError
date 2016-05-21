@@ -14,22 +14,18 @@ import java.util.HashMap;
  */
 public class Authentication {
     private SQL_Connection db;
+    private AssignData data;
     public Authentication(){
         db = new SQL_Connection();
+        data = new AssignData();
     }
-    public boolean loginSuccess(String username , String password){
+    public boolean loginSuccess(ArrayList<HashMap> list){
         boolean success;
-        String sql = "SELECT * FROM `ATM_Customer` WHERE Customer_ID LIKE '"+username+"' AND Customer_Pass LIKE '"+password+"'";
-        //String sql = "SELECT * FROM `ATM_Customer` WHERE Customer_ID LIKE '57130500218' AND Customer_Pass LIKE '2244'";
-        ArrayList<HashMap> list = db.select(sql);
-
         if(!list.isEmpty()){
             success = true;
-            //System.out.println("hhhh");
         } else{
             success = false;
         }
-
         return success;
     }
 }

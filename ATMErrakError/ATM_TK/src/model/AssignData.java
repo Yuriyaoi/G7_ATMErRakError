@@ -14,14 +14,13 @@ import edu.sit.cs.db.CSDbDelegate;
  */
 
 public class AssignData {
-    SQL_Connection db;
-    //get an arraylist from selected statements then convert to String
-    //assign String to dataStore class
-    public ArrayList<HashMap> getUserPass(){
-        String sql = "SELECT 'Customer_ID' FROM `ATM_Customer` WHERE ";
-        ArrayList<HashMap> list = db.queryRows(sql);
+
+    private DataStore dataStore;
+    
+    public void assignInfo(ArrayList<HashMap> list){
         for(HashMap l : list){
-            
+            dataStore.setInfo((""+l.get("Customer_ID")), (""+l.get("Customer_Pass"))
+                                  ,(""+l.get("Customer_Name")), (""+l.get("Customer_Balance")));
         }
     }
 }

@@ -7,7 +7,11 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.HashMap;
+import model.AssignData;
 import model.Authentication;
+import model.GetData;
 import view.LogIn_View;
 import view.Login;
 import view.Menu;
@@ -22,8 +26,13 @@ import view.Menu;
         private String username;
         private String password;
         private MenuControl menu;
+        private AssignData assignData;
+        private GetData getData;
         public LoginControl(){
            display = new Login();
+           authen = new Authentication();
+           getData = new GetData();
+           assignData = new AssignData();
            display.setActionLogIn(new LogInButtonAction());
            display.setVisible(true);
         } 
@@ -35,11 +44,11 @@ import view.Menu;
 
         private class LogInButtonAction implements ActionListener{
             public void actionPerformed(ActionEvent e) {
-
                 username = display.getUsername();
                 password = display.getPassword();
-                authen = new Authentication();
-                if(authen.loginSuccess(username, password)){
+                ArrayList<HashMap> list = getData.getUserInfo(username, password);
+                if(authen.loginSuccess(list)){
+                    assignData.assignInfo(list);
                     menu = new MenuControl();
                     display.dispose();
                 } else{

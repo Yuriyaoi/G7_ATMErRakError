@@ -30,12 +30,16 @@ public class SQL_Connection implements DB_Connection{
 
     @Override
     public void insert(String sql) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       connection();
+       db.executeQuery(sql);
+       disconnection(); 
     }
 
     @Override
     public void update(String sql) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        connection();
+        db.executeQuery(sql);
+        disconnection();
     }
 
     @Override
