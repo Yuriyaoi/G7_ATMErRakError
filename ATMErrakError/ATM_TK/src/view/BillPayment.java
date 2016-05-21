@@ -10,7 +10,7 @@ import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JTextField;
-
+import javax.swing.SwingConstants;
 
 public class  BillPayment extends JFrame 
 {
@@ -20,30 +20,30 @@ public class  BillPayment extends JFrame
 	private JButton back;
         private JButton submit;
         private JLabel background;
+        
 	public BillPayment() 
-        {
-                
+        {           
 		panel = new JPanel();
 		panel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		panel.setLayout(null);
-
-		
-		setContentPane(panel);
 		
 		bill_ID = new JTextField();
-		bill_ID.setBounds(275, 202, 296, 33);
+		bill_ID.setHorizontalAlignment(SwingConstants.CENTER);
+                bill_ID.setFont(new Font("Lucida Sans", Font.PLAIN, 16));
+		bill_ID.setBounds(265, 220, 270, 33);
                 bill_ID.setBorder(null);
 		panel.add(bill_ID);
 		bill_ID.setColumns(10);
 		
 		amount = new JTextField();
-		amount.setColumns(10);
+		amount.setHorizontalAlignment(SwingConstants.CENTER);
+                amount.setFont(new Font("Lucida Sans", Font.PLAIN, 16));
                 amount.setBorder(null);
-		amount.setBounds(275, 311, 296, 33);
+		amount.setBounds(285, 335, 220, 33);
 		panel.add(amount);
-		
-		submit = new JButton("Confirm");
-		submit.setBounds(347, 428, 108, 40);
+		                
+		submit = new JButton("Submit");
+		submit.setBounds(347, 430, 108, 40);
                 submit.setBackground(new Color(82, 132, 131));
 		submit.setForeground(Color.WHITE);
 		submit.setFocusPainted(false); //กรอบตัวอักษร
@@ -59,11 +59,12 @@ public class  BillPayment extends JFrame
 		panel.add(back);
 		
 		background = new JLabel("");
-                background.setIcon(new ImageIcon(getClass().getResource("/image/Bill.jpg")));
+                background.setIcon(new ImageIcon(getClass().getResource("/image/Bill1.png")));
 		background.setBounds(0, 0, 800, 600);
 		panel.add(background);
 		
-
+                		
+		setContentPane(panel);
                 setBounds(100, 100, 800, 600);
                 setUndecorated(true);
                 setLocationRelativeTo(null);

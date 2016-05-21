@@ -26,6 +26,7 @@ public class Deposit extends JFrame
 
 	private JPanel panel;
 	private JLabel amountLabel;
+        private JLabel background;
 	private JButton back;
 	private JButton delete;
 	private JButton no0;
@@ -43,15 +44,9 @@ public class Deposit extends JFrame
 	
 	public Deposit() 
         {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 800, 600);
 		panel = new JPanel();
 		panel.setBorder(new EmptyBorder(5, 5, 5, 5));
-		
-		
-		setUndecorated(true);
-		setLocationRelativeTo(null);
-		getContentPane().setLayout(null);
+                panel.setLayout(null);
 		
 		no1 = new JButton("1");
 		no1.setBounds(255, 298, 81, 43);
@@ -132,11 +127,17 @@ public class Deposit extends JFrame
 		amountLabel.setBounds(255, 208, 263, 33);
 		getContentPane().add(amountLabel);
 		
-		JLabel background = new JLabel("");
+		background = new JLabel("");
                 background.setIcon(new ImageIcon(getClass().getResource("/image/Deposit1.png")));
 		background.setBounds(0, 0, 800, 600);
 		getContentPane().add(background);
 		panel.setLayout(null);
+                
+                setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 800, 600);
+		setUndecorated(true);
+		setLocationRelativeTo(null);
+		getContentPane().setLayout(null);
 		
 	}
 	public void setButtonStyle(JButton button)

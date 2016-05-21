@@ -15,7 +15,6 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.SwingConstants;
-import controller.*;
 import java.awt.event.ActionListener;
 
 public class Login extends JFrame 
@@ -27,14 +26,8 @@ public class Login extends JFrame
         private JButton closeButton;
         private JLabel background;
 
-        //Controller controller = new Controller();
- 
-        /**
-         * constructor to populate components
-         */
 	public Login() 
-        {
-                
+        {           
 		panel = new JPanel();
 		panel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		panel.setLayout(null);
@@ -43,15 +36,14 @@ public class Login extends JFrame
 		usernameField.setHorizontalAlignment(SwingConstants.CENTER);
 		usernameField.setFont(new Font("Lucida Sans", Font.PLAIN, 16));
 		usernameField.setBorder(null);
-		usernameField.setBounds(309, 270, 177, 32);
+		usernameField.setBounds(335, 265, 177, 32);
 		panel.add(usernameField);
-		//usernameField.setColumns(10);
 		
 		passwordField = new JPasswordField();
 		passwordField.setFont(new Font("Lucida Sans", Font.PLAIN, 16));
 		passwordField.setHorizontalAlignment(SwingConstants.CENTER);
 		passwordField.setBorder(null);
-		passwordField.setBounds(319, 348, 177, 32);
+		passwordField.setBounds(335, 348, 177, 32);
 		panel.add(passwordField);
 		
 		loginButton = new JButton("Login");
@@ -59,8 +51,7 @@ public class Login extends JFrame
 		loginButton.setForeground(Color.WHITE);
 		loginButton.setFocusPainted(false); //กรอบตัวอักษร
 		loginButton.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
-		loginButton.setBounds(339, 429, 112, 48);
-
+		loginButton.setBounds(365, 429, 112, 48);
 		panel.add(loginButton);
 		
 		closeButton = new JButton("");
@@ -69,20 +60,11 @@ public class Login extends JFrame
 		closeButton.setForeground(Color.WHITE);
 		closeButton.setFont(new Font("Yu Gothic UI", Font.PLAIN, 10));
                 closeButton.setIcon(new ImageIcon(getClass().getResource("/image/Exit-Button.png")));
-		closeButton.addMouseListener(new MouseAdapter() 
-                {
-			@Override
-			public void mouseClicked(MouseEvent arg0) 
-			{
-				//closeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("K:\\WorkSpace\\UserInterface\\src\\LoginForm\\ButtonHover.png")));
-				System.exit(0);
-			}
-		});
 		panel.add(closeButton);
 		
 		background = new JLabel();
 		background.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
-                background.setIcon(new ImageIcon(getClass().getResource("/image/Draft_Login1 Test.jpg")));
+                background.setIcon(new ImageIcon(getClass().getResource("/image/Login1.png")));
 		background.setBounds(0, 0, 800, 600);
 		panel.add(background);
 		
@@ -97,10 +79,8 @@ public class Login extends JFrame
         public void setActionLogIn(ActionListener act){
             loginButton.addActionListener(act);
         }
-//        private void loginButtonActionPerformed(java.awt.event.ActionEvent evt)
-//        {                                          
-//            new Menu().setVisible(true);
-//            dispose();
-//        }   
+        public void setActionClose(ActionListener act){
+            closeButton.addActionListener(act);
+        } 
 }
 

@@ -7,9 +7,8 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import view.LogIn_View;
 import view.Login;
-import view.Menu;
+
 
 /**
  *
@@ -21,9 +20,12 @@ import view.Menu;
         public LoginControl(){
            display = new Login();
            display.setActionLogIn(new LogInButtonAction());
+           display.setActionClose(new closeButtonAction());
            display.setVisible(true);
         } 
         public static void main(String[] args) {
+            
+            
             new LoginControl();
         }
 
@@ -34,5 +36,10 @@ import view.Menu;
                 display.dispose();
             }
         }
-
+        private class closeButtonAction implements ActionListener{
+            public void actionPerformed(ActionEvent e) {
+                //display.dispose();
+                System.exit(0);
+            }
+        }
     }

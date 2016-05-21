@@ -19,55 +19,59 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
 
 
-public class Balance extends JFrame 
+public class Tranfer extends JFrame 
 {
 	private JPanel panel;
-	private JLabel nameLabel;
-	private JLabel idLabel;
+	private JTextField destinationID;
+	private JTextField amount;
         private JLabel balanceLabel;
-	private JButton back;
-        private JButton submit;
+	private JButton submit;
+        private JButton back;
         private JLabel background;
-	public Balance() 
+	public Tranfer() 
         {
                 
 		panel = new JPanel();
 		panel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		panel.setLayout(null);	
 		
-		nameLabel = new JLabel("");
-		nameLabel.setBounds(300, 175, 250, 33);
-                nameLabel.setFont(new java.awt.Font("Yu Gothic UI", 1, 20));
-                nameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-                nameLabel.setBorder(null);
-		panel.add(nameLabel);
+                destinationID = new JTextField();
+		destinationID.setHorizontalAlignment(SwingConstants.CENTER);
+                destinationID.setFont(new Font("Lucida Sans", Font.PLAIN, 16));
+		destinationID.setBounds(265, 220, 270, 33);
+                destinationID.setBorder(null);
+		panel.add(destinationID);
+		destinationID.setColumns(10);
 		
-		idLabel = new JLabel("");
-                idLabel.setBorder(null);
-		idLabel.setBounds(300, 295, 250, 33);
-                idLabel.setFont(new java.awt.Font("Yu Gothic UI", 1, 20));
-                idLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-		panel.add(idLabel);
+		amount = new JTextField();
+		amount.setHorizontalAlignment(SwingConstants.CENTER);
+                amount.setFont(new Font("Lucida Sans", Font.PLAIN, 16));
+                amount.setBorder(null);
+		amount.setBounds(285, 335, 220, 33);
+		panel.add(amount);
+		                
+		submit = new JButton("Submit");
+		submit.setBounds(347, 430, 108, 40);
+                submit.setBackground(new Color(82, 132, 131));
+		submit.setForeground(Color.WHITE);
+		submit.setFocusPainted(false); //กรอบตัวอักษร
+		submit.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
+		panel.add(submit);
 		
-                balanceLabel = new JLabel("");
-                balanceLabel.setBorder(null);
-		balanceLabel.setBounds(300, 410, 220, 33);
-                balanceLabel.setFont(new java.awt.Font("Yu Gothic UI", 1, 20));
-                balanceLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-		panel.add(balanceLabel);
-                	
-		back = new JButton("Back");
-		back.setBounds(347, 520, 108, 40);
+                back = new JButton("Back");
+		back.setBounds(15, 535, 109, 33);
 		back.setBackground(new Color(85, 85, 85));
 		back.setForeground(Color.WHITE);
 		back.setFocusPainted(false); //กรอบตัวอักษร
 		back.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
 		panel.add(back);
-		
+                
 		background = new JLabel("");
-                background.setIcon(new ImageIcon(getClass().getResource("/image/Balance1.png")));
+                background.setIcon(new ImageIcon(getClass().getResource("/image/Tranfer.png")));
 		background.setBounds(0, 0, 800, 600);
 		panel.add(background);
 		
@@ -87,7 +91,12 @@ public class Balance extends JFrame
 	}
         public void setActionBack(ActionListener act)
         {
-            back.addActionListener(act);
+             back.addActionListener(act);
+        }
+        public static void main(String[] args)
+        {
+            Tranfer tran = new Tranfer();
+            tran.setVisible(true);
         }
 //        public void setActionWithdraw(ActionListener act)
 //        {
