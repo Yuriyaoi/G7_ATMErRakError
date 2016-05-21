@@ -18,7 +18,7 @@ public class Menu extends JFrame {
 	private JButton withdrawButton ;
 	private JButton balanceButton;
 	private JButton depositButton;
-	private JButton donateButton;
+	private JButton tranferButton;
         private JButton moreServiceButton;
 	private JButton logoutButton;
         private JButton AddCustom;
@@ -45,10 +45,10 @@ public class Menu extends JFrame {
 		setButtonStyle(depositButton);
 		panel.add(depositButton);
 		
-		donateButton = new JButton("Donate");
-		donateButton.setBounds(569, 251, 230, 49); // x = 530
-		setButtonStyle(donateButton);
-		panel.add(donateButton);
+		tranferButton = new JButton("Tranfer");
+		tranferButton.setBounds(569, 251, 230, 49); // x = 530
+		setButtonStyle(tranferButton);
+		panel.add(tranferButton);
                 
                 moreServiceButton = new JButton("More Service");
 		moreServiceButton.setBounds(569, 344, 230, 49);
@@ -103,8 +103,8 @@ public class Menu extends JFrame {
         public void setActionMoreService(ActionListener act){
             moreServiceButton.addActionListener(act);
         }
-        public void setActionDonate(ActionListener act){
-            donateButton.addActionListener(act);
+        public void setActionTranfer(ActionListener act){
+            tranferButton.addActionListener(act);
         }
 //        private void withdrawButtonActionPerformed(java.awt.event.ActionEvent evt)
 //        {                                          

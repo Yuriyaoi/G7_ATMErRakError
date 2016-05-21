@@ -26,7 +26,7 @@ public class MoreService extends JFrame
 {
 
 	private JPanel panel;
-	private JButton tranferButton;
+	private JButton donateButton;
 	private JButton logoutButton;
 	private JButton payBillButton;
 	private JButton backButton;
@@ -51,13 +51,13 @@ public class MoreService extends JFrame
 		payBillButton.setBackground(new Color(82, 132, 131));
 		payBillButton.setForeground(Color.WHITE);
 		payBillButton.setFocusPainted(false); //กรอบตัวอักษร
-		//setButtonStyle(tranferButton);
+		//setButtonStyle(donateButton);
 		panel.add(payBillButton);
 		
-		tranferButton = new JButton("Tranfer");
-		tranferButton.setBounds(0, 344, 230, 49);
-		panel.add(tranferButton);
-		setButtonStyle(tranferButton);
+		donateButton = new JButton("Donate");
+		donateButton.setBounds(0, 344, 230, 49);
+		panel.add(donateButton);
+		setButtonStyle(donateButton);
 		
                 statement = new JButton("Statement");
 		statement.setBounds(0, 437, 230, 49); 
@@ -112,8 +112,8 @@ public class MoreService extends JFrame
         public void setActionBillPayment(ActionListener act){
             payBillButton.addActionListener(act);
         }
-        public void setActionTranfer(ActionListener act){
-            tranferButton.addActionListener(act);
+        public void setActionDonate(ActionListener act){
+            donateButton.addActionListener(act);
         }
         public void setActionStatement(ActionListener act){
             statement.addActionListener(act);

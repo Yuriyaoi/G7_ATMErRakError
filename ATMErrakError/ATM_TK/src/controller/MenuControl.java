@@ -10,7 +10,8 @@ public class MenuControl {
     private WithdrawControl withdrawControl;
     private DepositControl depositControl;
     private BalanceControl balanceControl;
-    private DonateControl donateControl;
+    //private DonateControl donateControl;
+    private TranferControl tranferControl;
     private LoginControl loginControl;
     private BillPaymentControl billPaymentControl;
     private MoreServiceControl moreServiceControl;
@@ -21,8 +22,7 @@ public class MenuControl {
         menu.setActionBalance(new balanceButtonAction());
         menu.setActionLogout(new logoutButtonAction());
         menu.setActionMoreService(new moreServiceButtonAction());
-        menu.setActionDonate
-        (new donateButtonAction());
+        menu.setActionTranfer(new tranferButtonAction());
         //System.out.println("pp");
         menu.setVisible(true);
     }    
@@ -69,11 +69,11 @@ public class MenuControl {
             menu.dispose();
         }
     }
-    private class donateButtonAction implements ActionListener
+    private class tranferButtonAction implements ActionListener
     {
         public void actionPerformed(ActionEvent e)              
         {
-            donateControl = new DonateControl();
+            tranferControl = new TranferControl();
             menu.dispose();
         }
     }

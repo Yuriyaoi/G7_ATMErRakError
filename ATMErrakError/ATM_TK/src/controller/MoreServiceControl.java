@@ -10,7 +10,7 @@ public class MoreServiceControl {
     private LoginControl loginControl;
     private BillPaymentControl billPaymentControl;
     private MenuControl menuControl;
-    private TranferControl tranferControl;
+    private DonateControl donateControl;
     private StatementControl statementControl;
     
     public MoreServiceControl()
@@ -19,7 +19,7 @@ public class MoreServiceControl {
         moreService.setActionBack(new backButtonAction());
         moreService.setActionLogout(new logoutButtonAction());
         moreService.setActionBillPayment(new billPaymentButtonAction());
-        moreService.setActionTranfer(new tranferButtonAction());
+        moreService.setActionDonate(new donateButtonAction());
         moreService.setActionStatement(new statementButtonAction());
         moreService.setVisible(true); moreService.setActionBillPayment(new billPaymentButtonAction());
     }    
@@ -28,11 +28,11 @@ public class MoreServiceControl {
     {
             new MoreServiceControl();
     }
-    private class tranferButtonAction implements ActionListener
+    private class donateButtonAction implements ActionListener
     {
         public void actionPerformed(ActionEvent e)              
         {
-            tranferControl = new TranferControl();
+            donateControl = new DonateControl();
             moreService.dispose();
         }
     }

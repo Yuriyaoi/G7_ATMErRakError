@@ -6,12 +6,11 @@ import view.Tranfer;
 public class TranferControl 
 {
         private Tranfer tranfer;
-        private MoreServiceControl moreServiceControl;
+        private MenuControl menuControl;
         
         public TranferControl(){
            tranfer = new Tranfer();
            tranfer.setActionBack(new backButtonAction());
-           tranfer.setActionSubmit(new backButtonAction());
            tranfer.setVisible(true);
         } 
         public static void main(String[] args) {
@@ -20,14 +19,8 @@ public class TranferControl
 
         private class backButtonAction implements ActionListener{
             public void actionPerformed(ActionEvent e) {
-                moreServiceControl = new MoreServiceControl();
+                menuControl = new MenuControl();
                 tranfer.dispose();
-            }
-        }
-        
-        private class submitButtonAction implements ActionListener{
-            public void actionPerformed(ActionEvent e) {
-                
             }
         }
 }
