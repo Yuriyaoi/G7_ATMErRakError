@@ -19,6 +19,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
@@ -102,17 +103,24 @@ public class Tranfer extends JFrame
             Tranfer tran = new Tranfer();
             tran.setVisible(true);
         }
-//        public void setActionWithdraw(ActionListener act)
-//        {
-//            withdrawButton.addActionListener(act);
-//        }
-//        public void setActionDeposit(ActionListener act)
-//        {
-//            depositButton.addActionListener(act);
-//        }
-//        public void  setActionStatement(ActionListener act)
-//        {
-//            statementButton.addActionListener(act);
-//        }
+        
+        public void setAmount(String text){
+            this.amount.setText(text);
+        }
+        
+        public String getAmount(){
+            return this.amount.getText();
+        }
+        public String getDestinationID(){
+            return this.destinationID.getText();
+        }
+        public void showPopUp(String message){
+            JOptionPane.showMessageDialog(null, message);
+        }
+        public int askConfirm(String message, String title){
+            int reply;
+            reply = JOptionPane.showConfirmDialog(null, message, title, JOptionPane.YES_NO_OPTION);
+            return reply;
+        }
    
 }

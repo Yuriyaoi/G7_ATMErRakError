@@ -11,6 +11,7 @@ package model;
  */
 public class DataStore {
     static String id, password, name, balance;
+    static String idDes, nameDes, balanceDes;
     static String no;
     static String no_each;
     static int cnt = 1;
@@ -24,6 +25,12 @@ public class DataStore {
         DataStore.name = name;
         DataStore.balance = balance;
     }
+    public static void setDestinationInfo(String idDes, String nameDes, String balanceDes){
+        DataStore.idDes = idDes;
+        DataStore.nameDes = nameDes;
+        DataStore.balanceDes = balanceDes;
+    }
+    
     public static void setCurrentBalance(String balance){
         DataStore.balance = balance;
     }
@@ -40,6 +47,10 @@ public class DataStore {
         DataStore.mode = mode;
         DataStore.amount = amount;   
     }
+    public static void setDestinationBalance(String balanceDes) {
+        DataStore.balanceDes = balanceDes;
+    }
+    
     public static String getCustomerID(){
         return id;   
     }
@@ -48,6 +59,12 @@ public class DataStore {
     }
     public static String getName(){
         return name;   
+    }
+    public static String getDestinationID(){
+        return idDes;
+    }
+    public static String getDestinationBalance(){
+        return balanceDes;
     }
 
 }
