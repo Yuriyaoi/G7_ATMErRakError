@@ -44,7 +44,7 @@ public class DataStore {
     public static String getCustomerID(){
         return id;   
     }
-    public static String getBalance(){
+    public static String getCurrentBalance(){
         return balance;   
     }
     public static String getName(){

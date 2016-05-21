@@ -13,20 +13,16 @@ import java.util.HashMap;
  * @author Yuri
  */
 public class Authentication {
-    private SQL_Connection db;
-    private AssignData data;
     public Authentication(){
-        db = new SQL_Connection();
-        data = new AssignData();
+        
     }
+    
     public boolean loginSuccess(ArrayList<HashMap> list){
-        boolean success;
-        if(!list.isEmpty()){
-            success = true;
-        } else{
-            success = false;
-        }
-        return success;
+        return !list.isEmpty();
+    }
+    
+    public boolean validUserID(ArrayList<HashMap> list){
+        return !list.isEmpty();
     }
 }
     

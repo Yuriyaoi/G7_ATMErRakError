@@ -89,17 +89,13 @@ public class Balance extends JFrame
         {
             back.addActionListener(act);
         }
-//        public void setActionWithdraw(ActionListener act)
-//        {
-//            withdrawButton.addActionListener(act);
-//        }
-//        public void setActionDeposit(ActionListener act)
-//        {
-//            depositButton.addActionListener(act);
-//        }
-//        public void  setActionStatement(ActionListener act)
-//        {
-//            statementButton.addActionListener(act);
-//        }
-   
+        public void setIDLabel(String id){
+            this.idLabel.setText(id);
+        }
+        public void setNameLabel(String name){
+            this.nameLabel.setText(name);
+        }
+        public void setBalanceLabel(String balance){
+            this.balanceLabel.setText(balance);
+        }
 }

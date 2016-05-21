@@ -93,6 +93,10 @@ public class Tranfer extends JFrame
         {
              back.addActionListener(act);
         }
+        public void setActionSubmit(ActionListener act)
+        {
+             submit.addActionListener(act);
+        }
         public static void main(String[] args)
         {
             Tranfer tran = new Tranfer();

@@ -17,7 +17,7 @@ public abstract class Transaction {
     public Transaction(){
         dataStore = new DataStore();
         db = new SQL_Connection();
-        balance = Double.parseDouble(dataStore.getBalance());
+        balance = Double.parseDouble(dataStore.getCurrentBalance());
     }
     public abstract boolean checkAmount(double input);
     public abstract void doTransaction(double input);

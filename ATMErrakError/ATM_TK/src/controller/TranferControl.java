@@ -11,6 +11,7 @@ public class TranferControl
         public TranferControl(){
            tranfer = new Tranfer();
            tranfer.setActionBack(new backButtonAction());
+           tranfer.setActionSubmit(new backButtonAction());
            tranfer.setVisible(true);
         } 
         public static void main(String[] args) {
@@ -21,6 +22,12 @@ public class TranferControl
             public void actionPerformed(ActionEvent e) {
                 moreServiceControl = new MoreServiceControl();
                 tranfer.dispose();
+            }
+        }
+        
+        private class submitButtonAction implements ActionListener{
+            public void actionPerformed(ActionEvent e) {
+                
             }
         }
 }
