@@ -41,6 +41,7 @@ public class Deposit extends JFrame
 	private JButton no9;
 	private JButton enter;
 	private JButton reset;	
+        //private JButton back;
 	
 	public Deposit() 
         {
@@ -148,6 +149,10 @@ public class Deposit extends JFrame
 		button.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
 	}
         
+        public void setActionbackButton(ActionListener act)
+        {
+            back.addActionListener(act);
+        }
         public void setAmount(String amount)
         {
             this.amountLabel.setText(amount);
@@ -155,10 +160,6 @@ public class Deposit extends JFrame
         public String getAmount()
         {
             return this.amountLabel.getText();
-        }
-        public void setActionbackButton(ActionListener act)
-        {
-            back.addActionListener(act);
         }
         public void setActionNo1(ActionListener act)
         {

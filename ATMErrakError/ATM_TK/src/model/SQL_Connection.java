@@ -6,6 +6,8 @@
 package model;
 
 import edu.sit.cs.db.CSDbDelegate;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  *
@@ -23,27 +25,33 @@ public class SQL_Connection implements DB_Connection{
     }
     public void disconnection(){
         db.disconnect();
+        System.out.println(db.disconnect());
     }
 
     @Override
-    public void insert() {
+    public void insert(String sql) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void update() {
+    public void update(String sql) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void delete() {
+    public void delete(String sql) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     // pass String as a parameter and return as an arraylist to class AssignData
-    public void select() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public ArrayList<HashMap> select(String sql){
+        connection();
+        System.out.println(sql);
+        ArrayList<HashMap> list = db.queryRows(sql);
+        System.out.println(list.size());
+        disconnection();
+        return list;
     }
     
 }

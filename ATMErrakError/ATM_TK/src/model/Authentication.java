@@ -13,39 +13,24 @@ import java.util.HashMap;
  * @author Yuri
  */
 public class Authentication {
+    private SQL_Connection db;
     public Authentication(){
-        
+        db = new SQL_Connection();
     }
-    private boolean logInSuccess(String user , String password){
+    public boolean loginSuccess(String username , String password){
         boolean success;
-        String output = "";
-        String sql = "SELECT * FROM `ATM_Customer` ";
-        ArrayList<HashMap> list = db.queryRows(sql);
-        for(HashMap l : list){
-            if(l.get("Customer_ID").equals(user)){
-                if(l.get("Customer_Pass").equals(password)){
-                    output = "Correct password";
-                    storeData.info((""+l.get("Customer_ID")) , (""+l.get("Customer_Pass"))
-                                  ,(""+l.get("Customer_Name")), (""+l.get("Customer_Balance")));
-                    break;
-                }
-                else{
-                    output = "Wrong password";
-                    break;
-                }
-            }
-            else{
-                output = "Wrong User";
-            }
+        String sql = "SELECT * FROM `ATM_Customer` WHERE Customer_ID LIKE '"+username+"' AND Customer_Pass LIKE '"+password+"'";
+        //String sql = "SELECT * FROM `ATM_Customer` WHERE Customer_ID LIKE '57130500218' AND Customer_Pass LIKE '2244'";
+        ArrayList<HashMap> list = db.select(sql);
+
+        if(!list.isEmpty()){
+            success = true;
+            //System.out.println("hhhh");
+        } else{
+            success = false;
         }
+
         return success;
     }
-    
-    public void checkUsername(String user){
-        
-    }
-    
-    public void checkPassword(String pass){
-        
-    }
 }
+    

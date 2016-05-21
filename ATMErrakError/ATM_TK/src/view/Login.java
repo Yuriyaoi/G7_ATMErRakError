@@ -16,6 +16,7 @@ import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.SwingConstants;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 
 public class Login extends JFrame 
 {
@@ -79,6 +80,21 @@ public class Login extends JFrame
         public void setActionLogIn(ActionListener act){
             loginButton.addActionListener(act);
         }
+        
+        public String getUsername(){
+            return usernameField.getText();
+        }
+        public String getPassword(){
+            return passwordField.getText();
+        }
+        public void showPopUp(String message){
+            JOptionPane.showMessageDialog(null, message);
+        }
+//        private void loginButtonActionPerformed(java.awt.event.ActionEvent evt)
+//        {                                          
+//            new Menu().setVisible(true);
+//            dispose();
+//        }   
         public void setActionClose(ActionListener act){
             closeButton.addActionListener(act);
         } 

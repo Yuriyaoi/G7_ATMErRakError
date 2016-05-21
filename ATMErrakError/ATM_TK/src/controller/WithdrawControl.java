@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 import view.Withdraw;
 public class WithdrawControl 
 {
-        private Withdraw withdraw;
+    private Withdraw withdraw;
         private MenuControl menu;
         
         public WithdrawControl(){
