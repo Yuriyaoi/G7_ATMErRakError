@@ -19,6 +19,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 
 
 public class Deposit extends JFrame 
@@ -213,6 +214,14 @@ public class Deposit extends JFrame
         public void setActionEnter(ActionListener act)
         {
             enter.addActionListener(act);
+        }
+         public void showPopUp(String message){
+            JOptionPane.showMessageDialog(null, message);
+        }
+        public int askConfirm(String message, String title){
+            int reply;
+            reply = JOptionPane.showConfirmDialog(null, message, title, JOptionPane.YES_NO_OPTION);
+            return reply;
         }
 }
 

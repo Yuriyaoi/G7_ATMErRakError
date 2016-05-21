@@ -2,14 +2,21 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
+import model.DepositTransaction;
+import model.GetData;
 import view.Deposit;
 public class DepositControl 
 {
     private Deposit deposit;
     private MenuControl menu;
+    private DepositTransaction depositTransaction;
+    private GetData getData;
     
     public DepositControl(){
         deposit = new Deposit();
+        depositTransaction = new DepositTransaction();
+        getData = new GetData();
         deposit.setActionbackButton(new backButtonAction());
         deposit.setActionNo1(new no1ButtonAction());
         deposit.setActionNo2(new no2ButtonAction());
@@ -23,9 +30,9 @@ public class DepositControl
         deposit.setActionNo0(new no0ButtonAction());
         deposit.setActionReset(new resetButtonAction());
         deposit.setActionDelete(new deleteButtonAction());
-        deposit.setActionEnter(new EnterButtonAction());
+        deposit.setActionEnter(new enterButtonAction());
         
-           deposit.setVisible(true);
+        deposit.setVisible(true);
     } 
     
     public static void main(String[] args) 
@@ -140,11 +147,34 @@ public class DepositControl
                 }
             }
         }
-        private class EnterButtonAction implements ActionListener
+        private class enterButtonAction implements ActionListener
         {
             public void actionPerformed(ActionEvent e) 
             {
-                //
+                double amount;
+                try{
+                    amount = Double.parseDouble(deposit.getAmount());
+                    if(depositTransaction.checkAmount(amount)){
+                        if(depositTransaction.checkBankNote(amount)){
+                            depositTransaction.doTransaction(amount);
+                            depositTransaction.updateStatement(getData.getLastestStateNo(), "Deposit", amount);
+                            deposit.showPopUp("Deposit successfully");
+                            deposit.setAmount("");
+                            if (deposit.askConfirm("Do you want to deposit more?", "") == JOptionPane.NO_OPTION){
+                                menu = new MenuControl();
+                            }
+                        } else{
+                            deposit.showPopUp("Sorry, not a banknote");
+                        }
+                    } else{
+                            deposit.showPopUp("Sorry, we limit 100000 Baht per one deposit");
+                            deposit.setAmount("100000");
+                        }
+                } catch(NumberFormatException num){
+                        amount = 100000;
+                        deposit.showPopUp("Sorry, we limit 100000 Baht per one deposit");
+                        deposit.setAmount(amount+"");
+                  }
             }
         }
 }

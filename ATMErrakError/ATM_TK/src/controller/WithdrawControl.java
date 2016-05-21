@@ -4,18 +4,18 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import model.GetData;
-import model.Transaction;
+import model.WithdrawTransaction;
 import view.Login;
 import view.Withdraw;
 public class WithdrawControl 
 {
     private Withdraw withdraw;
         private MenuControl menu;
-        private Transaction transaction;
+        private WithdrawTransaction withdrawTransaction;
         private GetData getData;
         public WithdrawControl(){
            withdraw = new Withdraw();
-           transaction = new Transaction();
+           withdrawTransaction = new WithdrawTransaction();
            getData = new GetData();
            withdraw.setActionBack(new backButtonAction());
            withdraw.setActionNo1(new no1ButtonAction());
@@ -149,14 +149,14 @@ public class WithdrawControl
             public void actionPerformed(ActionEvent e) 
             {
                 //withdraw money not more than 100,000 and your must be banknote
-                int amount;
+                double amount;
                 try{
-                    amount = Integer.parseInt(withdraw.getAmount());
-                    if(transaction.checkAmount(amount)){
-                        if(transaction.checkBankNote(amount)){
-                            if(transaction.checkLimit(amount)){
-                                transaction.withdraw(amount);
-                                transaction.updateStatement(getData.getLastestStateNo(), "Withdraw", amount);
+                    amount = Double.parseDouble(withdraw.getAmount());
+                    if(withdrawTransaction.checkAmount(amount)){
+                        if(withdrawTransaction.checkBankNote(amount)){
+                            if(withdrawTransaction.checkLimit(amount)){
+                                withdrawTransaction.doTransaction(amount);
+                                withdrawTransaction.updateStatement(getData.getLastestStateNo(), "Withdraw", amount);
                                 withdraw.showPopUp("Withdraw successfully");
                                 withdraw.setAmount("");
                                 if (withdraw.askConfirm("Do you want to withdraw more?", "") == JOptionPane.NO_OPTION){
