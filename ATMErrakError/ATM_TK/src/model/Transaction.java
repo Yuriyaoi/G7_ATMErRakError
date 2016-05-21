@@ -12,12 +12,12 @@ package model;
 public abstract class Transaction {
     public DataStore dataStore;
     public SQL_Connection db;
-    public int balance;
+    public double balance;
     
     public Transaction(){
         dataStore = new DataStore();
         db = new SQL_Connection();
-        balance = Integer.parseInt(dataStore.getBalance());
+        balance = Double.parseDouble(dataStore.getBalance());
     }
     public abstract boolean checkAmount(double input);
     public abstract void doTransaction(double input);
