@@ -2,21 +2,19 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import model.DataStore;
 import view.Balance;
 public class BalanceControl 
 {
     private Balance balance;
     private MenuControl menuControl;
-    private WithdrawControl withdrawControl;
-    private DepositControl depositControl;
-    private StatementControl statementControl;
+    private DataStore dataStore;
         
     public BalanceControl(){
         balance = new Balance();
+        dataStore = new DataStore();
         balance.setActionBack(new backButtonAction());
-//        balance.setActionWithdraw(new withdrawButtonAction());
-//        balance.setActionDeposit(new depositButtonAction());
-//        balance.setActionStatement(new statementButtonAction());
+        showAllInfo();
         balance.setVisible(true);
     } 
     public static void main(String[] args) {
@@ -29,23 +27,12 @@ public class BalanceControl
             balance.dispose();
         }
     }
-//    private class withdrawButtonAction implements ActionListener{
-//        public void actionPerformed(ActionEvent e) {
-//            withdrawControl = new WithdrawControl();
-//            balance.dispose();
-//        }
-//    }
-//    private class depositButtonAction implements ActionListener{
-//        public void actionPerformed(ActionEvent e) {
-//            depositControl = new DepositControl();
-//            balance.dispose();
-//        }
-//    }
-//    private class statementButtonAction implements ActionListener{
-//        public void actionPerformed(ActionEvent e) {
-//            statementControl = new StatementControl();
-//            balance.dispose();
-//        }
-//    }
+    
+    private void showAllInfo(){
+        balance.setIDLabel(dataStore.getCustomerID());
+        balance.setNameLabel(dataStore.getName());
+        balance.setBalanceLabel(dataStore.getCurrentBalance());
+    }
+
 }
 
