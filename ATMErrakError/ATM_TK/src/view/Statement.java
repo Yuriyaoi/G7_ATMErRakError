@@ -11,6 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.JScrollPane;
 
 public class Statement extends JFrame{
     
@@ -18,34 +19,37 @@ public class Statement extends JFrame{
 	private JButton back;
         private JLabel background;
         private JTable table;
+        private JScrollPane scroll;
 	public Statement() 
-        {
-                
+        {         
 		panel = new JPanel();
 		panel.setBorder(new EmptyBorder(5, 5, 5, 5));
-		panel.setLayout(null);
+		panel.setLayout(null);	     
                 
+                scroll = new JScrollPane();
+                scroll.setBounds(130,150,550,350);
+                scroll.setFont(new Font("Lucida Sans", Font.PLAIN, 16));
+                scroll.setBackground(new Color(65, 171, 225));
+                scroll.setBorder(null);
                 
-		setContentPane(panel);
-		
-//		bill_ID = new JTextField();
-//		bill_ID.setBounds(275, 202, 296, 33);
-//                bill_ID.setBorder(null);
-//		panel.add(bill_ID);
-//		bill_ID.setColumns(10);
-//		
-//		amount = new JTextField();
-//		amount.setColumns(10);
-//                amount.setBorder(null);
-//		amount.setBounds(275, 311, 296, 33);
-//		panel.add(amount);
-		
-		
+                table = new JTable();
+                table.setFont(new Font("Lucida Sans", Font.PLAIN, 16));
+                table.setBorder(null);
+                table.setBackground(new Color(65, 171, 225));
+                table.setModel(new DefaultTableModel
+                (
+                    new Object [][] {}, 
+                    new String [] {"Transaction NO", "Customer ID", "Mode", "Amount"}
+                ));
+                
+                scroll.setViewportView(table);
+                panel.add(scroll);
+
 		back = new JButton("Back");
 		back.setBounds(15, 535, 109, 33);
 		back.setBackground(new Color(85, 85, 85));
 		back.setForeground(Color.WHITE);
-		back.setFocusPainted(false); //กรอบตัวอักษร
+		back.setFocusPainted(false); 
 		back.setFont(new Font("Yu Gothic UI", Font.PLAIN, 20));
 		panel.add(back);
 		
@@ -54,7 +58,7 @@ public class Statement extends JFrame{
 		background.setBounds(0, 0, 800, 600);
 		panel.add(background);
 		
-
+                setContentPane(panel);
                 setBounds(100, 100, 800, 600);
                 setUndecorated(true);
                 setLocationRelativeTo(null);
@@ -63,21 +67,5 @@ public class Statement extends JFrame{
         public void setActionBack(ActionListener act)
         {
             back.addActionListener(act);
-        }
-        
-        private void tableAncestorAdded(javax.swing.event.AncestorEvent evt) {                                             
-//            DefaultTableModel model = (DefaultTableModel) table.getModel();
-//            int c = 0;
-//            storeData.no_each = "0";
-//            for(int i = 0; i < storeData.cnt ; i++) {
-//              getDB.statementStoreNo_Each();
-//              c++;
-//            }
-//            storeData.no_each = "0";
-//            for(int i = 1; i < c ; i++) {
-//                getDB.statementStoreNo_Each();
-//                model.addRow(new Object[]{i,storeData.user,storeData.mode,storeData.amount});
-//            }
-//            storeData.cnt = 1;
-        }                                             
+        }                              
 }
