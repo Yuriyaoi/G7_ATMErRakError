@@ -7,6 +7,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.border.EmptyBorder;
@@ -67,5 +68,9 @@ public class Statement extends JFrame{
         public void setActionBack(ActionListener act)
         {
             back.addActionListener(act);
-        }                              
+        }        
+        public void showPopUp(String message){
+            JOptionPane.showMessageDialog(null, message);
+        }
+        
 }
