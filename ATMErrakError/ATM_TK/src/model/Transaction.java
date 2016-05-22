@@ -26,6 +26,10 @@ public abstract class Transaction {
         return input % 100 == 0;
     }
     
+    public boolean checkLimit(double input){
+        return input <= balance;
+    }
+    
     public void updateStatement(int lastestStateNo, String mode, double input){
         int nextStateNo = ++lastestStateNo;
         String sql_insert = "INSERT INTO `ATM_Statement`"

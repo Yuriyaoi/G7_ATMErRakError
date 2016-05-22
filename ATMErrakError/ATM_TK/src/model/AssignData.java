@@ -23,4 +23,10 @@ public class AssignData {
                                   ,(""+l.get("Customer_Name")), (""+l.get("Customer_Balance")));
         }
     }
+    
+    public void assignDestinationInfo(ArrayList<HashMap> list){
+        for(HashMap l : list){
+            dataStore.setDestinationInfo((""+l.get("Customer_ID")), (""+l.get("Customer_Name")), (""+l.get("Customer_Balance")));
+        }
+    }
 }

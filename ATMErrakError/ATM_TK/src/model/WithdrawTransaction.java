@@ -22,10 +22,6 @@ public class WithdrawTransaction extends Transaction{
         return input <= 20000;
     }
 
-    public boolean checkLimit(double input){
-        return input <= balance;
-    }
-
     public void doTransaction(double input){
         double remain = balance - input;
         dataStore.setCurrentBalance(remain+"");
