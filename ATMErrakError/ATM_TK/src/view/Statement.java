@@ -24,31 +24,8 @@ public class Statement extends JFrame{
 		panel = new JPanel();
 		panel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		panel.setLayout(null);
-
-//		table.setModel(new DefaultTableModel
-//                (
-//                    new Object [][] {},
-//                    new String [] {"No.", "ID", "Mode", "Amount"}
-//                ) 
-//                {
-//                    boolean[] canEdit = new boolean [] {false, false, false, false};
-//
-//                    public boolean isCellEditable(int rowIndex, int columnIndex) 
-//                    {
-//                        return canEdit [columnIndex];
-//                    }
-//                });
-//                panel.add(table);
-            
-//                jScrollPane1.setViewportView(User_Statement);
-//                if (User_Statement.getColumnModel().getColumnCount() > 0) {
-//                User_Statement.getColumnModel().getColumn(0).setResizable(false);
-//                User_Statement.getColumnModel().getColumn(0).setPreferredWidth(10);
-//                User_Statement.getColumnModel().getColumn(1).setResizable(false);
-//                User_Statement.getColumnModel().getColumn(1).setPreferredWidth(100);
-//                User_Statement.getColumnModel().getColumn(2).setResizable(false);
-//                User_Statement.getColumnModel().getColumn(3).setResizable(false);
-//                }
+                
+                
 		setContentPane(panel);
 		
 //		bill_ID = new JTextField();
@@ -87,8 +64,9 @@ public class Statement extends JFrame{
         {
             back.addActionListener(act);
         }
-        private void User_StatementAncestorAdded(javax.swing.event.AncestorEvent evt) {                                             
-//            DefaultTableModel model = (DefaultTableModel) User_Statement.getModel();
+        
+        private void tableAncestorAdded(javax.swing.event.AncestorEvent evt) {                                             
+//            DefaultTableModel model = (DefaultTableModel) table.getModel();
 //            int c = 0;
 //            storeData.no_each = "0";
 //            for(int i = 0; i < storeData.cnt ; i++) {

@@ -12,15 +12,14 @@ import java.util.HashMap;
  *
  * @author Yuri
  */
-public class TransferTransaction extends Transaction{
+public class DonateTransaction extends Transaction{
     private double balanceDes;
-    
-    public TransferTransaction(){
+    public DonateTransaction(){
         
     }
-
     public boolean checkAmount(double input){
-        return input <= 100000;
+        //no amount limit for donation
+        return true;
     }
     public void doTransaction(double input){
         deductBalance(input);
@@ -51,9 +50,6 @@ public class TransferTransaction extends Transaction{
                 + "SET Customer_Balance= '"+dataStore.balanceDes+"'"
                 + " WHERE Customer_ID = '"+dataStore.idDes+"'";
         db.update(sql_up2);
-    }
-    public void insertDestination(){
-        
     }
     
 }

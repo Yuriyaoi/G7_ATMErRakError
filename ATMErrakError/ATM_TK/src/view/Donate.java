@@ -13,6 +13,7 @@ import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.ButtonGroup;
+import javax.swing.JOptionPane;
 
 
 public class  Donate extends JFrame 
@@ -117,6 +118,10 @@ public class  Donate extends JFrame
         {
             back.addActionListener(act);
         }
+        public void setActionSubmit(ActionListener act)
+        {
+            submit.addActionListener(act);
+        }
         public void setActionOrg1(ActionListener act)
         {
             org1.addActionListener(act);
@@ -149,9 +154,26 @@ public class  Donate extends JFrame
         {
             return org4;
         }
-        public void setDestinationID(String str)
+        public void setDestinationID(String idDes)
         {
-            this.destinationID.setText(str);
+            this.destinationID.setText(idDes);
+        }
+        public void setAmount(String amount){
+            this.destinationID.setText(amount);
+        }
+        public String getDestinationID(){
+            return destinationID.getText();
+        }
+        public String getAmount(){
+            return amount.getText();
+        }
+        public void showPopUp(String message){
+            JOptionPane.showMessageDialog(null, message);
+        }
+        public int askConfirm(String message, String title){
+            int reply;
+            reply = JOptionPane.showConfirmDialog(null, message, title, JOptionPane.YES_NO_OPTION);
+            return reply;
         }
         public static void main(String[] arg)
         {

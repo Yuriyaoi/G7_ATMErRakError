@@ -32,7 +32,7 @@ public class TranferControl
 
         private class backButtonAction implements ActionListener{
             public void actionPerformed(ActionEvent e) {
-                menuControl = new MenuControl();
+                menu = new MenuControl();
                 tranfer.dispose();
             }
         }

@@ -9,6 +9,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
@@ -73,6 +74,28 @@ public class  BillPayment extends JFrame
         public void setActionBack(ActionListener act)
         {
             back.addActionListener(act);
+        }
+        
+        public void setActionSubmit(ActionListener act)
+        {
+            submit.addActionListener(act);
+        }
+        public String getAmount(){
+            return this.amount.getText();
+        }
+        public String getBillID(){
+            return this.bill_ID.getText();
+        }
+        public void setAmount(String text){
+            this.amount.setText(text);
+        }
+        public void showPopUp(String message){
+            JOptionPane.showMessageDialog(null, message);
+        }
+        public int askConfirm(String message, String title){
+            int reply;
+            reply = JOptionPane.showConfirmDialog(null, message, title, JOptionPane.YES_NO_OPTION);
+            return reply;
         }
 }
 

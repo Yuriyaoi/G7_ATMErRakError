@@ -36,8 +36,15 @@ public class GetData {
         return lastestStateNo;
     }
     public ArrayList<HashMap> getUser(String username){
-        String sql = "SELECT * FROM `ATM_Customer` WHERE Customer_ID LIKE '"+username+"'";
+        String sql = "SELECT * FROM `Bank_Customer` WHERE Customer_ID LIKE '"+username+"'";
         ArrayList<HashMap> list = db.select(sql);
         return list;
     }
+    
+    public ArrayList<HashMap> getOrganization(String username){
+        String sql = "SELECT * FROM `Bank_Customer` WHERE Customer_Name LIKE '"+username+"'";
+        ArrayList<HashMap> list = db.select(sql);
+        return list;
+    }
+
 }

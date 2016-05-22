@@ -27,5 +27,9 @@ public class DepositTransaction extends Transaction{
                 + "SET Customer_Balance= '"+dataStore.balance+"'"
                 + " WHERE Customer_ID = '"+dataStore.id+"'";
         db.update(sql_up);
+        String sql_up2 = "UPDATE `Bank_Customer` "
+                + "SET Customer_Balance= '"+dataStore.balance+"'"
+                + " WHERE Customer_ID = '"+dataStore.id+"'";
+        db.update(sql_up2);
     }
 }
